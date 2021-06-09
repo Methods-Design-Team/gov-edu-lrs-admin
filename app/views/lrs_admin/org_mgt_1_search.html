@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<div>
+  <nav class="app-lrs-navigation" aria-label="lrs navigation">
+    <ul class="app-lrs-navigation__list">
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_1_learners_tab.html">Learners</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" aria-current="page" href="/menus/helpdesk/menu_hd_secondline_2_organisations_tab.html">Organisations</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_3_datachallenges_tab.html">Data challenges</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_4_servicetools_tab.html">Service tools</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_5_achievements_tab.html">Achievements</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_6_admin_tab.html">Admin</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_7_webservices_tab.html">Web services</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p class="govuk-body">Organisation management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="app_mgt_1_search.html">Manage applications</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="org_mgt_1_search.html">Find organisation</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Add organisation</a>
+      </li>
+    </ul>
+   
+    <br>
+    <p class="govuk-body">User management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Add or remove a user</a>
+      </li>
+    </ul>
+</div>
+
+
+<div class="govuk-grid-column-three-quarters">
+
+  <h1 class="govuk-heading-l">Find organisation</h1>
+   
+
+  <div class="govuk-form-group">
+
+    <label class="govuk-label" for="width-20">
+      Search by organisation name, UKPRN or organisation reference
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"></div>
+
+    <!--
+    <p class="govuk-body-m">Search by:</p>
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              Name
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              UKPRN
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+              Organisation reference
+            </label>
+          </div>
+        </div>
+    
+      </fieldset>
+    </div>
+
+
+
+    <div>
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"></div>
+    </div>  
+
+    -->
+
+    <a href="org_mgt_2_org_tab_all_orgs.html" class="govuk-button show-continue">Search</a>
+
+
+
+<!--
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col"> </th>
+          <th class="govuk-table__header" scope="col"> </th>
+        </tr>
+      </thead>
+
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+
+          <h3 class="govuk-heading-m govuk-!-margin-bottom-3">
+            <a href="app_mgt_2_app_tab.html" class="govuk-link govuk-link--no-visited-state">
+              Weir Trust
+            </a></h3>
+          <p>Application reference: 1234588<br>
+            Independent Learning Provider<br>
+            UKPRN: 87651234<br>
+            18 August 2020</p>
+        </td>
+        <td class="govuk-summary-list__actions">
+
+          <strong class="govuk-tag govuk-tag--blue">
+            New
+          </strong>
+
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href=“”>
+              Cherryleas Assessment Centre</a></h3>
+          <p>
+            Application reference: 1234588<br>
+            Independent Learning Provider<br>
+            UKPRN: 87651234<br>
+            02 August 2020</p>
+        </td>
+        <td class="govuk-summary-list__actions">
+          <strong class="govuk-tag govuk-tag--grey">
+            Waiting
+          </strong>
+
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href=“”>
+              Centre for Accelerated Learning</a></h3>
+          <p>
+            Application reference: 1234588<br>
+            Independent Learning Provider<br>
+            UKPRN: 87651234<br>
+            11 July 2020</p>
+
+        </td>
+
+        <td class="govuk-summary-list__actions">
+          <strong class="govuk-tag govuk-tag--grey">
+            Assigned
+          </strong>
+
+        </td>
+
+        </td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href=“”>
+              Chesterfield Hospital School</a></h3>
+          <p>
+            Application reference: 1234588<br>
+            Independent Learning Provider<br>
+            UKPRN: 87651234<br>
+            30 June 2020</p>
+        </td>
+
+        <td class="govuk-summary-list__actions">
+          <strong class="govuk-tag govuk-tag--green">
+            Pending signature
+          </strong>
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+-->
+
+</div>
+
+
+
+
+    
+
+
+{% endblock %}

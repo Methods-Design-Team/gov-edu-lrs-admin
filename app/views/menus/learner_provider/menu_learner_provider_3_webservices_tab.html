@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<div>
+  <nav class="app-lrs-navigation" aria-label="lrs navigation">
+    <ul class="app-lrs-navigation__list">
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="menu_learner_provider_1_learners_tab.html">Learners</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="menu_learner_provider_2_users_tab.html">Users</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" aria-current="page" href="menu_learner_provider_3_webservices_tab.html">Web services</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+ 
+    <p class="govuk-body">Web services</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Download certificate</a>
+      </li>
+    </ul>
+
+</div>
+
+
+  <div class="govuk-grid-column-three-quarters">
+    
+
+
+    <h1 class="govuk-heading-l">Web services</h1>
+    <p class="govuk-body-m">Your organisation uses an MI system to connect to the LRS. We use a web service certificate to make sure that the connection is secure. You can download the latest certificate here.</p>
+    <p class="govuk-body-m">We will email you when you need to download a new certificate.</p>
+    
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

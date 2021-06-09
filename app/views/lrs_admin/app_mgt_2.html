@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div>
+  <nav class="app-lrs-navigation" aria-label="lrs navigation">
+    <ul class="app-lrs-navigation__list">
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_1_learners_tab.html">Learners</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" aria-current="page" href="/menus/helpdesk/menu_hd_secondline_2_organisations_tab.html">Organisations</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_3_datachallenges_tab.html">Data challenges</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_4_servicetools_tab.html">Service tools</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_5_achievements_tab.html">Achievements</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_6_admin_tab.html">Admin</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_7_webservices_tab.html">Web services</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p class="govuk-body">Organisation management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="app_mgt_1_search.html">Manage applications</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="org_mgt_1_search.html">Find organisation</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Add organisation</a>
+      </li>
+    </ul>
+   
+    <br>
+    <p class="govuk-body">User management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Add or remove a user</a>
+      </li>
+    </ul>
+</div>
+
+
+
+<div class="govuk-grid-column-three-quarters">
+
+    <h1 class="govuk-heading-l">Manage applications</h1>
+    <p class="govuk-body-l">The organisation management area allows you to search for an organisation by its UKPRN, organisation reference, or name. You can also create a new organisation record.</p>
+    
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-20">
+        Search by name or UKPRN or application reference
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"></div>
+
+
+      <a href="app_mgt_2.html" class="govuk-button show-continue">
+        Search
+      </a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

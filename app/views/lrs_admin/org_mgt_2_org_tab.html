@@ -1,0 +1,247 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+
+
+<div>
+  <nav class="app-lrs-navigation" aria-label="lrs navigation">
+    <ul class="app-lrs-navigation__list">
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_1_learners_tab.html">Learners</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" aria-current="page" href="/menus/helpdesk/menu_hd_secondline_2_organisations_tab.html">Organisations</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_3_datachallenges_tab.html">Data challenges</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_4_servicetools_tab.html">Service tools</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_5_achievements_tab.html">Achievements</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_6_admin_tab.html">Admin</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_7_webservices_tab.html">Web services</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p class="govuk-body">Organisation management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="app_mgt_1_search.html">Manage applications</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="org_mgt_1_search.html">Find organisation</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Add organisation</a>
+      </li>
+    </ul>
+   
+    <br>
+    <p class="govuk-body">User management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Add or remove a user</a>
+      </li>
+    </ul>
+</div>
+
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+
+      <span id="dob-hint" class="govuk-hint">
+        UKPRN: 1234567</span>
+
+    </legend>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Weir Training</h1>
+
+        <h2 class="govuk-heading-m"></h2>
+
+
+        <!--
+
+        <nav class="app-sub-navigation" aria-label="Sub navigation">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="app.html">Application</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="app_mgt_2_notes_tab.html">Notes</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="app_mgt_2_timeline_tab.html">Timeline</a>
+            </li>
+          </ul>
+        </nav>
+
+        -->
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Organisation details</h2>
+
+
+        <div id="OrganisationDetailsList">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Trading name</dt>
+              <dd class="govuk-summary-list__value"></dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Name</dt>
+              <dd class="govuk-summary-list__value">WEIR TRAINING</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">PLR display name</dt>
+              <dd class="govuk-summary-list__value">WEIR TRAINING</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Organisation reference</dt>
+              <dd class="govuk-summary-list__value">U31572</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Address</dt>
+              <dd class="govuk-summary-list__value"></dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Telephone</dt>
+              <dd class="govuk-summary-list__value"></dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Organisation email</dt>
+              <dd class="govuk-summary-list__value"></dd>
+            </div>
+          </dl>
+        </div>
+
+
+            <!--
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Data challenge email</dt><dd class="govuk-summary-list__value"></dd>
+          </div><div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Receive batch email notifications</dt><dd class="govuk-summary-list__value">No</dd>
+          </div><div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Local authority number</dt><dd class="govuk-summary-list__value">308</dd>
+          </div><div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Establishment number</dt><dd class="govuk-summary-list__value">4015</dd>
+          </div><div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Company number</dt><dd class="govuk-summary-list__value"></dd>
+          </div><div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Information Commissioner's Office number</dt><dd class="govuk-summary-list__value"></dd>
+          </div><div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Charity number</dt><dd class="govuk-summary-list__value"></dd>
+          </div><div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Department of Education Northern Ireland number</dt><dd class="govuk-summary-list__value"></dd>
+          </div><div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Provider type</dt><dd class="govuk-summary-list__value"></dd>
+          </div><div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Estimated volume of student registrations per year</dt><dd class="govuk-summary-list__value"></dd>
+          -->
+          
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Access details</h2>
+
+        <div id="AccessDetailsList">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">UKRLP status</dt>
+              <dd class="govuk-summary-list__value"></dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Has web service access</dt>
+              <dd class="govuk-summary-list__value">Yes</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Has schools to schools access</dt>
+              <dd class="govuk-summary-list__value">No</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Awarding organisation RITS number</dt>
+              <dd class="govuk-summary-list__value"></dd>
+            </div>
+          </dl>
+        </div>
+        
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Registration details</h2>
+
+        <div id="RegistrationDetailsList">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">LRS status</dt>
+              <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag govuk-tag--green">
+                  Registered
+                </strong>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Date created</dt>
+              <dd class="govuk-summary-list__value">05 Aug 2020</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Last updated</dt>
+              <dd class="govuk-summary-list__value">05 Aug 2020</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Last updated by</dt>
+              <dd class="govuk-summary-list__value"></dd>
+            </div>
+          </dl>
+        </div>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Data Protection Officer details</h2>
+
+        <div id="DPOList">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Data protection officer</dt>
+              <dd class="govuk-summary-list__value">Alice Coyle</dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Data protection officer email address</dt>
+              <dd class="govuk-summary-list__value">alice.coyle@email.com</dd>
+            </div>
+        </div>
+
+
+
+
+
+
+      <a href="#" class="govuk-button show-continue">Delete organisation</a>
+      <a href="#" class="govuk-button show-continue">Manage links</a>
+      <a href="#" class="govuk-button show-continue">View functions</a>
+      <a href="#" class="govuk-button show-continue">Update password</a>
+      <a href="#" class="govuk-button show-continue">View Web Services</a>
+
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

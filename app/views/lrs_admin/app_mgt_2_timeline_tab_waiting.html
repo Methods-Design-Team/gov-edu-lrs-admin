@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div>
+  <nav class="app-lrs-navigation" aria-label="lrs navigation">
+    <ul class="app-lrs-navigation__list">
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_1_learners_tab.html">Learners</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" aria-current="page" href="/menus/helpdesk/menu_hd_secondline_2_organisations_tab.html">Organisations</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_3_datachallenges_tab.html">Data challenges</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_4_servicetools_tab.html">Service tools</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_5_achievements_tab.html">Achievements</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_6_admin_tab.html">Admin</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_7_webservices_tab.html">Web services</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p class="govuk-body">Organisation management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="app_mgt_1_search.html">Manage applications</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="org_mgt_1_search.html">Find organisation</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Add organisation</a>
+      </li>
+    </ul>
+   
+    <br>
+    <p class="govuk-body">User management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Add or remove a user</a>
+      </li>
+    </ul>
+</div>
+
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+
+      <span id="dob-hint" class="govuk-hint">
+        Application reference: 1234567</span>
+
+    </legend>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Weir Training</h1>
+
+        <h2 class="govuk-heading-m"></h2>
+
+        <nav class="app-sub-navigation" aria-label="Sub navigation">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="app_mgt_2_app_tab_pending_signature.html">Application</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="app_mgt_2_timeline_tab_pending.html">Timeline</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="app_mgt_2_notes_tab_pending.html">Additional notes</a>
+            </li>
+          </ul>
+        </nav>
+
+       <!--
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">Notes</h2>
+          <div id="more-detail-hint" class="govuk-hint">
+             
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+            aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <a href="app_mgt_2_notes_tab_2nd_line.html" class="govuk-button show-continue">Save</a>
+        
+
+        <br>
+        <br>
+        <h2 class="govuk-heading-m">Timeline</h2>
+        <br>
+        <h3 class="govuk-heading-s">Registered</h3>
+        <p>Organisation is registered<br><br> 30 Nov 2020</p>
+        <hr>
+
+        <br>
+        <h3 class="govuk-heading-s">Status change</h3>
+        <p>Signatory signature received<br><br> 30 Sep 2020</p>
+        <hr>
+
+        --> 
+
+        <br>
+        <h3 class="govuk-heading-s">Waiting on customer</h3>
+        <p>Application is awaiting on customer info<br><br> 30 Aug 2020</p>
+        <hr>
+    
+        <br>
+        <h3 class="govuk-heading-s">Status change</h3>
+        <p>Application assigned to second line<br><br>24 Jul 2020</p>
+        <hr>
+    
+        <br>
+        <h3 class="govuk-heading-s">Application received</h3>
+        <p><br>21 Jun 2020 at 9:49pm</p>
+        <hr>
+      
+        </div>
+
+
+      {% endblock %}

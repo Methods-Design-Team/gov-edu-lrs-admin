@@ -1,0 +1,502 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+
+
+<div>
+  <nav class="app-lrs-navigation" aria-label="lrs navigation">
+    <ul class="app-lrs-navigation__list">
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_1_learners_tab.html">Learners</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" aria-current="page"
+          href="/menus/helpdesk/menu_hd_secondline_2_organisations_tab.html">Organisations</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_3_datachallenges_tab.html">Data
+          challenges</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_4_servicetools_tab.html">Service
+          tools</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link"
+          href="/menus/helpdesk/menu_hd_secondline_5_achievements_tab.html">Achievements</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_6_admin_tab.html">Admin</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_7_webservices_tab.html">Web
+          services</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p class="govuk-body">Organisation management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="app_mgt_1_search.html">Manage applications</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="org_mgt_1_search.html">Find organisation</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Add organisation</a>
+      </li>
+    </ul>
+
+    <br>
+    <p class="govuk-body">User management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Add or remove a user</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <span id="dob-hint" class="govuk-hint">
+        Application reference: 1234567
+      </span>
+    </legend>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Weir Training
+        </h1>
+
+
+        <nav class="app-sub-navigation" aria-label="Sub navigation">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="app_mgt_2_app_tab_pending_signature.html">Application</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="app_mgt_2_timeline_tab_pending.html">Timeline</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link"  href="app_mgt_2_notes_tab_pending.html">Additional notes</a>
+            </li>
+          </ul>
+        </nav>
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Organisation details</h2>
+
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+
+            <!--
+            <dt class="govuk-summary-list__key">
+              Application Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag">
+                NEW
+              </strong>
+            </dd>
+          </div>
+
+          -->
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Status
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag govuk-tag--yellow" >
+                  Waiting on customer
+                </strong>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                UKPRN
+              </dt>
+              <dd class="govuk-summary-list__value">
+                12345678
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Provider type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Independent Training Provider
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">Alpha 319,
+                  Chobham Business Centre,
+                  Chertsey Road,
+                  Chobham,
+                  Surrey,
+                  GU24 8JB</p>
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Location
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">England</p>
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Company number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                12345678
+              </dd>
+            </div>
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Parent organisation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Weir Trust
+              </dd>
+            </div>
+
+        </dl>
+
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Verifiers</h2>
+        <!--<a class="app-float-right" href="#">Change</a>-->
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              ICO number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1108311
+            </dd>
+          </div>
+        </dl>
+
+   
+
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-9">Reasons for access</h2>
+      <!--<a class="app-float-right" href="#">Change</a>-->
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+
+          <dt class="govuk-summary-list__key">
+            Access to LRS
+          </dt>
+          <dd class="govuk-summary-list__value">
+            We work with an Ofqual regulated awarding organisation that uses the ULN
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              <!--Change--><span class="govuk-visually-hidden"> access to LRS</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+
+          <dt class="govuk-summary-list__key">
+            Awarding body
+          </dt>
+          <dd class="govuk-summary-list__value">
+            OCR Oxford Cambridge and RSA
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              <!--Change--><span class="govuk-visually-hidden"> awarding body </span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+
+          <dt class="govuk-summary-list__key">
+            Uploaded file
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a class="govuk-link" href="#">
+              OCR_accr
+              <!--Change-->ation.pdf
+            </a>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              <!--Change--><span class="govuk-visually-hidden"> uploaded file</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Estimated learners
+          </dt>
+          <dd class="govuk-summary-list__value">
+            2000
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              <!--Change--><span class="govuk-visually-hidden">estimated learners</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+    <br>
+    <br>
+
+
+    <h2 class="govuk-heading-m">Application owner</h2>
+    <a class="app-float-right" href="app_mgt_change_detail.html">Change</a>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden"></span>
+          </a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Romeo Bridger
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <!--Change--><span class="govuk-visually-hidden"></span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          0789 009 8800
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden"></span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="mailto:rbridger@weirtraining.co.uk">rbridger@weirtraining.co.uk</a>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#"><input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+              value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+            <span class="govuk-visually-hidden"> </span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <h2 class="govuk-heading-m">Super user</h2>
+    <a class="app-float-right" href="app_mgt_change_detail.html">Change</a>
+
+    <dl class="govuk-summary-list ">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Jane Smith
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <!--Change--><span class="govuk-visually-hidden"></span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          0789 997 6604
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden"></span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="mailto:tcurtis@weirtraining.co.uk">jsmith@weirtraining.co.uk</a>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden"> </span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <br>
+    <br>
+
+    <h2 class="govuk-heading-m">Data Protection officer</h2>
+    <a class="app-float-right" href="app_mgt_change_detail.html">Change</a>
+
+    <dl class="govuk-summary-list ">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Bob Odenburt
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <!--Change--><span class="govuk-visually-hidden"></span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          0789 997 6604
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden"></span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="mailto:bodenburt@ach.gov.uk">bodenburt@weirtraining.co.uk</a>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden"> </span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <br>
+    <br>
+
+    <h2 class="govuk-heading-m">Agreement signatory</h2>
+    <a class="app-float-right" href="app_mgt_change_detail.html">Change</a>
+
+    <dl class="govuk-summary-list ">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Theo Curtis
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <!--Change--><span class="govuk-visually-hidden"></span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          0789 997 6604
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden"></span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="mailto:tcurtis@weirtraining.co.uk">tcurtis@weirtraining.co.uk</a>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden"> </span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+  </div>
+
+
+
+  {% endblock %}
