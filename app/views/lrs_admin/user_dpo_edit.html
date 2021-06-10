@@ -5,54 +5,52 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+
+{% include "menus/helpdesk/menu_hd_firstline_2_organisations_tab_blank.html" %}
+
 <a href="#" class="govuk-back-link">Back</a>
 
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-      <h1 class="govuk-fieldset__heading">
-        Who is the data protection officer?</h1>
-    </legend><br>
-
     <div class="govuk-form-group">
-      <label class="govuk-label" for="contractor">
-        First name
-      </label>
-      <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
-        spellcheck="false" placeholder="Bob">
-    </div>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="contractor">
-        Last name
-      </label>
-      <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
-        spellcheck="false" placeholder="Odenburt">
-    </div>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="contractor">
-        Phone number
-      </label>
-      <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
-        spellcheck="false" placeholder="07123456789">
-    </div>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="contractor">
-        Email address
-      </label>
-      <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
-        spellcheck="false" placeholder="bob.odenburt@email.com">
-    </div>
-  </fieldset>
-  
-</div>
+      <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+            Who is the data protection officer?</h1>
+        </legend><br>
 
-    
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contractor">
+            First name
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+            spellcheck="false" placeholder="Bob">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contractor">
+            Last name
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+            spellcheck="false" placeholder="Odenburt">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contractor">
+            Phone number
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+            spellcheck="false" placeholder="07123456789">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contractor">
+            Email address
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+            spellcheck="false" placeholder="bob.odenburt@email.com">
+        </div>
+      </fieldset>
 
-<a href="answers.html" class="govuk-button show-continue">
-  Save
-</a>
-
+      <a href="answers.html" class="govuk-button show-continue">
+        Save
+      </a>
 
 
 {% endblock %}
