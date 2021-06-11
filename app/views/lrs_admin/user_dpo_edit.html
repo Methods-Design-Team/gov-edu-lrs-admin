@@ -6,22 +6,21 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
-{% include "menus/helpdesk/menu_hd_firstline_2_organisations_tab_blank.html" %}
-
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">
-
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_rename.html" %}
   </div>
 </div>
 
 
+
 <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_hd_firstline_2_organisations_tab_blank.html" %}
+  </div>
+
   <div class="govuk-grid-column-three-quarters">
-   
-
-<a href="#" class="govuk-back-link">Back</a>
-
-
+    <a href="#" class="govuk-back-link">Back</a>
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -58,21 +57,17 @@ GOV.UK Prototype Kit
             spellcheck="false" placeholder="bob.odenburt@email.com">
         </div>
       </fieldset>
-
+      </div>
 
       <button class="govuk-button" data-module="govuk-button">
         Save and continue
       </button>
 
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter">
-           <a href="answers.html" class="govuk-button show-continue">Save</a>
-        </div>
-      </div>
+      <a href="answers.html" class="govuk-button show-continue">Save</a>
 
     </div>
   </div>
+</div>
 
 
 {% endblock %}
