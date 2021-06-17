@@ -1,0 +1,321 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learners_firstline.html" %}
+  </div>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learners_firstline.html" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <a href="app_mgt_2_app_tab_first_line.html" class="govuk-back-link">Back</a>
+
+    <h1 class="govuk-heading-l">Register a learner</h1>
+    <h2 class="govuk-heading-m">Confirm learner details</h2>
+
+    <p class="govuk-body">We cannot find an existing learner with these details, so you can continue to register this
+      learner.</p>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Check the details below are correct. If there are any errors, you can return to the previous screen and perform
+        another search with the correct details.
+      </strong>
+    </div>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+
+        <dt class="govuk-summary-list__key">
+          Given name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Given name
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+
+        <dt class="govuk-summary-list__key">
+          Preferred given name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Preferred given name
+        </dd>
+
+      </div>
+
+      <div class="govuk-summary-list__row">
+
+        <dt class="govuk-summary-list__key">
+          Middle name(s)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a class="govuk-link" href="#">
+            Middle name(s)
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Previous family name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Previous family name
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Family name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Family name
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Date of birth
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Gender
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Gender
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Postcode
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Postcode
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Email
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Unique Candidate Identifier (UCI)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Unique Candidate Identifier (UCI)
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Unique Pupil Number (UPI)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Unique Pupil Number (UPI)
+        </dd>
+      </div>
+
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Enter additional details</h2>
+    <p class="govuk-body">Please complete as many of these fields as possible. This will help others to identify the
+      correct learner in the future.</p>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="three-quarters">
+        Title
+      </label>
+      <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="three-quarters">
+        Family name at age 16
+      </label>
+      <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="three-quarters">
+        Place of birth
+      </label>
+      <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Nationality *
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published" selected>Please select</option>
+        <option value="updated">Option 1</option>
+        <option value="views">Option 2</option>
+        <option value="comments">Option 3</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="three-quarters">
+        School at age 16
+      </label>
+      <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="three-quarters">
+        Scottish candidate number 
+      </label>
+      <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="three-quarters">
+        Address line 1
+      </label>
+      <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="three-quarters">
+        Address line 2
+      </label>
+      <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="three-quarters">
+        Town
+      </label>
+      <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="three-quarters">
+        County
+      </label>
+      <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+        <p class="govuk-body">Date of birth *</p>
+        <div id="passport-issued-hint" class="govuk-hint">
+          For example, 12 11 2007
+        </div>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day"
+                name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month"
+                name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year"
+                name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <h2 class="govuk-heading-m">Identity verification</h2>
+    <p class="govuk-body">When you register a learner, you must check their identity.</p>
+    <p class="govuk-body">Mandatory fields are marked with an asterisk (*)</p>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Verification type *
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published" selected>Please select</option>
+        <option value="updated">Option 1</option>
+        <option value="views">Option 2</option>
+        <option value="comments">Option 3</option>
+      </select>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="one-quarter">
+        Other verification type
+      </label>
+      <input class="govuk-input govuk-!-width-one-quarter" id="one-quarter" name="one-quarter" type="text"></div>
+
+    
+    
+      <h2 class="govuk-heading-m">Privacy ntoice</h2>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You will not be able to view this learner’s Personal Learning Record unless they have seen the privacy notice (opens in a new tab).
+        </strong>
+      </div>
+
+      <p class="govuk-body">It’s your legal obligation to confirm that they’ve seen the privacy notice before ticking the box below.</p>
+      <p class="govuk-body">If you’re unable to confirm this, you can update this setting once they’re registered.</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                I agree that this learner has seen the privacy notice and their learning profile can be updated to reflect this.
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+    <a href="#" class="govuk-button show-continue">Register learner</a>
+    <a href="#" class="govuk-button govuk-button--secondary">Cancel</a>
+</div>
+
+
+{% endblock %}
