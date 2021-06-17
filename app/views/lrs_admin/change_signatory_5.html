@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_rename.html" %}
+  </div>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_hd_firstline_2_organisations_tab_blank.html" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <a href="app_mgt_2_app_tab_first_line.html" class="govuk-back-link">Back</a>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+            Signatory details</h1>
+        </legend><br>
+
+        <p class="govuk-body">If you amend the signatory details below and select ‘Continue’, we’ll send an email to the new signatory asking them to re-sign the agreement.
+        </p>
+
+        <div class="govuk-inset-text">
+          The person signing the Learning Records Service agreement must be listed as an officer or as a ‘person with significant control’ on <a href="https://www.gov.uk/get-information-about-a-company" target="blank">Companies House</a> .
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contractor">
+            First name
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+            spellcheck="false" placeholder="Theo">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contractor">
+            Last name
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+            spellcheck="false" placeholder="Curtis">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contractor">
+            Phone number
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+            spellcheck="false" placeholder="07123456789">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contractor">
+            Email address
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+            spellcheck="false" placeholder="tcurtis@weirtraining.co.uk">
+        </div>
+      </fieldset>
+      </div>
+
+      <a href="answers.html" class="govuk-button show-continue">Save</a>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
