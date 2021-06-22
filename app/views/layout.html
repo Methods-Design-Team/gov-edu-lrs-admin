@@ -41,29 +41,29 @@ GOV.UK Prototype Kit
 {% block header %}
 
 {{ govukHeader({
-    homepageUrl: "/start",
-    containerClasses: "govuk-width-container",
-    serviceName: "Learning Records Service (LRS)",
-    serviceUrl: "/index",
-    navigation: [
-      {
-        href: "https://lrs-test10.dev.lrs.education.gov.uk/Pages/WhatsNew",
-        text: ""
-      },
-      {
-        href: "/my_account/my_account_tab_1",
-        text: ""
-      },
-      {
-        href: "/menus/help.html",
-        text: ""
-      },
-      {
-        href: "#",
-        text: ""
-      }
-    ]
-  })
+  homepageUrl: "/start",
+  containerClasses: "govuk-width-container",
+  serviceName: "Learning Records Service (LRS)",
+  serviceUrl: "/index",
+  navigation: [
+    {
+      href: "https://lrs-test10.dev.lrs.education.gov.uk/Pages/WhatsNew",
+      text: "What's new"
+    },
+    {
+      href: "/my_account/my_account_tab_1",
+      text: "My account"
+    },
+    {
+      href: "/menus/help.html",
+      text: "Help"
+    },
+    {
+      href: "#",
+      text: "Log out"
+    }
+  ]
+})
 }}
 {% endblock %}
 
