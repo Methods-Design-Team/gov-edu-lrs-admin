@@ -5,7 +5,18 @@ GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
 
-{% include "menus/helpdesk/menu_hd_firstline_2_organisations_tab_test.html" %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_organisations_secondline.html" %}
+  </div>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_organisations_secondline.html" %}
+  </div>
 
 <div class="govuk-grid-column-three-quarters">
 

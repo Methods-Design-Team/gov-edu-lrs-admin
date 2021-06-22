@@ -24,6 +24,8 @@ GOV.UK prototype kit
 
 
 
+
+
   <div class="govuk-grid-column-three-quarters">
 
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -45,41 +47,48 @@ GOV.UK prototype kit
         <nav class="app-sub-navigation" aria-label="Sub navigation">
           <ul class="app-sub-navigation__list">
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link" href="app_mgt_2_app_tab.html">Application</a>
+              <a class="app-sub-navigation__link" href="app_mgt_2_app_tab_first.html">Application</a>
             </li>
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link" aria-current="page" href="app_mgt_2_notes_tab_2nd_line.html">Notes</a>
+              <a class="app-sub-navigation__link" href="app_mgt_2_timeline_tab_first.html">Timeline</a>
             </li>
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link" href="app_mgt_2_timeline_tab_2nd_line.html">Timeline</a>
+              <a class="app-sub-navigation__link" aria-current="page" href="app_mgt_2_notes_tab_first.html">Additional
+                notes</a>
             </li>
           </ul>
         </nav>
 
 
-        <br>
-        <h2 class="govuk-heading-m">Note 1</h2>
-        <p>Second waiting<br>Bethany<br> 30 Apr 2021</p>
-        <hr>
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">Add notes</h2>
+          <div id="more-detail-hint" class="govuk-hint">
 
-        <br>
-        <h2 class="govuk-heading-m">Note 2</h2>
-        <p>Second waiting<br>Bethany<br> 30 Aug 2020</p>
-        <hr>
-    
-        <br>
-        <h2 class="govuk-heading-m">Note 3</h2>
-        <p>Second assigned<br>Bethany<br>24 Aug 2020</p>
-        <hr>
-    
-        <br>
-        <h2 class="govuk-heading-m">Note 4</h2>
-        <p>Tom<br>21 Aug 2020 at 9:49pm</p>
-        <hr>
-      
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+            aria-describedby="more-detail-hint"></textarea>
         </div>
+        <a href="#" class="govuk-button show-continue">Save</a>
+
+
+        <br>
+        <br>
+        <h2 class="govuk-heading-m">Notes</h2>
+        <h3 class="govuk-heading-s">Note added by Bethany Johnson</h3>
+        <p>Certificate uploaded was blurry<br><br> 30 Apr 2021</p>
+        <hr>
+
+        <br>
+        <h3 class="govuk-heading-s">Note added by Bethany Johnson</h3>
+        <p>ICO number only included for parent organisation <br><br> 30 Aug 2020</p>
+        <hr>
+
+
+      </div>
+
+
+    </div>
 
 
 
-
-      {% endblock %}
+    {% endblock %}
