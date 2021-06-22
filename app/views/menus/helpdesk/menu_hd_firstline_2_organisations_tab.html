@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -7,6 +6,28 @@ GOV.UK Prototype Kit
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_organisations_firstline.html" %}
+  </div>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_organisations_firstline.html" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <h1 class="govuk-heading-l">Organisation management</h1>
+    <p class="govuk-body-m">The organisation management area allows you to you can review and approve applications from
+      providers, find and create organisations.</p>
+
+  </div>
+
+  <!--
 <div>
   <nav class="app-lrs-navigation" aria-label="lrs navigation">
     <ul class="app-lrs-navigation__list">
@@ -56,9 +77,7 @@ GOV.UK Prototype Kit
 
 </div>
 
-
-<h1 class="govuk-heading-l">Organisation management</h1>
-<p class="govuk-body-m">The organisation management area allows you to you can review and approve applications from providers, find and create organisations.</p>
+-->
 
 
 
@@ -72,4 +91,5 @@ GOV.UK Prototype Kit
 
 
 
-{% endblock %}
+
+  {% endblock %}
