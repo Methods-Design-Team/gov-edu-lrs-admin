@@ -8,7 +8,7 @@ GOV.UK prototype kit
 {% block content %}
 
 
-
+<!--
 <div>
   <nav class="app-lrs-navigation" aria-label="lrs navigation">
     <ul class="app-lrs-navigation__list">
@@ -16,22 +16,27 @@ GOV.UK prototype kit
         <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_1_learners_tab.html">Learners</a>
       </li>
       <li class="app-lrs-navigation__item">
-        <a class="app-lrs-navigation__link" aria-current="page" href="/menus/helpdesk/menu_hd_secondline_2_organisations_tab.html">Organisations</a>
+        <a class="app-lrs-navigation__link" aria-current="page"
+          href="/menus/helpdesk/menu_hd_secondline_2_organisations_tab.html">Organisations</a>
       </li>
       <li class="app-lrs-navigation__item">
-        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_3_datachallenges_tab.html">Data challenges</a>
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_3_datachallenges_tab.html">Data
+          challenges</a>
       </li>
       <li class="app-lrs-navigation__item">
-        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_4_servicetools_tab.html">Service tools</a>
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_4_servicetools_tab.html">Service
+          tools</a>
       </li>
       <li class="app-lrs-navigation__item">
-        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_5_achievements_tab.html">Achievements</a>
+        <a class="app-lrs-navigation__link"
+          href="/menus/helpdesk/menu_hd_secondline_5_achievements_tab.html">Achievements</a>
       </li>
       <li class="app-lrs-navigation__item">
         <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_6_admin_tab.html">Admin</a>
       </li>
       <li class="app-lrs-navigation__item">
-        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_7_webservices_tab.html">Web services</a>
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_7_webservices_tab.html">Web
+          services</a>
       </li>
     </ul>
   </nav>
@@ -52,7 +57,7 @@ GOV.UK prototype kit
         <a class="govuk-link" href="#">Add organisation</a>
       </li>
     </ul>
-   
+
     <br>
     <p class="govuk-body">User management</p>
     <ul class="govuk-list">
@@ -60,8 +65,22 @@ GOV.UK prototype kit
         <a class="govuk-link" href="#">Add or remove a user</a>
       </li>
     </ul>
-</div>
+  </div>
 
+  -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      {% include "menus/helpdesk/menu_top_organisations_firstline.html" %}
+    </div>
+  </div>
+  
+  
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      {% include "menus/helpdesk/menu_LHS_organisations_firstline.html" %}
+    </div>
 
 
 
