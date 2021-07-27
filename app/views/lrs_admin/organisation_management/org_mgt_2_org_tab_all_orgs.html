@@ -5,25 +5,24 @@ GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
 
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    {% include "menus/helpdesk/menu_top_organisations_firstline.html" %}
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
   </div>
 </div>
 
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
-    {% include "menus/helpdesk/menu_LHS_organisations_firstline.html" %}
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
   </div>
 
 
 
-<div class="govuk-grid-column-three-quarters">
-  <h1 class="govuk-heading-l">Search results</h1>
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-l">Search results</h1>
 
-      <!--
+    <!--
 
   <h1 class="govuk-heading-l">Find organisation</h1>
   <p class="govuk-body-m">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -62,98 +61,93 @@ GOV.UK Prototype Kit
         </tr>
       </thead>
 
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
 
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-3">
-            <a href="org_mgt_2_org_tab.html" class="govuk-link govuk-link--no-visited-state">
-              Weir Training
-            </a></h3>
-          <p>
-            <b>UKPRN: </b>87651234<br>
-            <b>Organisation type: </b> Learning provider<br>
-            <b>Provider type: </b> State School<br>
-            <b>Display name: </b>King's Academy 
-          
-          
-          </p>
-        </td>
-        <td class="govuk-summary-list__actions">
-
-          <strong class="govuk-tag govuk-tag--blue">
-            New
-          </strong>
-
-        </td>
-      </tr>
-
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href=“#”>
-              Cherryleas Assessment Centre</a></h3>
-          <p>
-            Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            02 August 2020</p>
-        </td>
-        <td class="govuk-summary-list__actions">
-          <strong class="govuk-tag govuk-tag--grey">
-            Waiting
-          </strong>
-
-        </td>
-      </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href=“#”>
-              Centre for Accelerated Learning</a></h3>
-          <p>
-            Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            11 July 2020</p>
-
-        </td>
-
-        <td class="govuk-summary-list__actions">
-          <strong class="govuk-tag govuk-tag--grey">
-            Assigned
-          </strong>
-
-        </td>
-
-        </td>
-      </tr>
-
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href=“#”>
-              Chesterfield Hospital School</a></h3>
-          <p>
-            Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            30 June 2020</p>
-        </td>
-
-        <td class="govuk-summary-list__actions">
-          <strong class="govuk-tag govuk-tag--green">
-            Pending signature
-          </strong>
-        </td>
-      </tr>
-
-    
-  </tbody>
-</table>
-</div>
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3">
+              <a href="org_mgt_2_org_tab.html" class="govuk-link govuk-link--no-visited-state">
+                Weir Training
+              </a></h3>
+            <p>
+              <b>UKPRN: </b>87651234<br>
+              <b>Organisation type: </b> Learning provider<br>
+              <b>Provider type: </b> State School<br>
+              <b>Display name: </b>King's Academy
 
 
+            </p>
+          </td>
+          <td class="govuk-summary-list__actions">
+
+            <strong class="govuk-tag govuk-tag--blue">
+              New
+            </strong>
+
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href=“#”>
+                Cherryleas Assessment Centre</a></h3>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              02 August 2020</p>
+          </td>
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--grey">
+              Waiting
+            </strong>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href=“#”>
+                Centre for Accelerated Learning</a></h3>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              11 July 2020</p>
+
+          </td>
+
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--grey">
+              Assigned
+            </strong>
+
+          </td>
+
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href=“#”>
+                Chesterfield Hospital School</a></h3>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              30 June 2020</p>
+          </td>
+
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--green">
+              Pending signature
+            </strong>
+          </td>
+        </tr>
 
 
-    
+      </tbody>
+    </table>
+  </div>
 
 
 
@@ -172,4 +166,9 @@ GOV.UK Prototype Kit
 
 
 
-{% endblock %}
+
+
+
+
+
+  {% endblock %}

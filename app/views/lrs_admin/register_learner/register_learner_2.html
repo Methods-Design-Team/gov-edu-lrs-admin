@@ -8,16 +8,15 @@ GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    {% include "menus/helpdesk/menu_top_learners_firstline.html" %}
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
   </div>
 </div>
 
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
-    {% include "menus/helpdesk/menu_LHS_learners_firstline.html" %}
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
   </div>
+
 
   <div class="govuk-grid-column-three-quarters">
     <a href="app_mgt_2_app_tab_first_line.html" class="govuk-back-link">Back</a>
@@ -193,7 +192,7 @@ GOV.UK Prototype Kit
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="three-quarters">
-        Scottish candidate number 
+        Scottish candidate number
       </label>
       <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text">
     </div>
@@ -284,38 +283,41 @@ GOV.UK Prototype Kit
       </label>
       <input class="govuk-input govuk-!-width-one-quarter" id="one-quarter" name="one-quarter" type="text"></div>
 
-    
-    
-      <h2 class="govuk-heading-m">Privacy notice</h2>
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          You will not be able to view this learner’s Personal Learning Record unless they have seen the privacy notice (opens in a new tab).
-        </strong>
-      </div>
 
-      <p class="govuk-body">It’s your legal obligation to confirm that they’ve seen the privacy notice before ticking the box below.</p>
-      <p class="govuk-body">If you’re unable to confirm this, you can update this setting once they’re registered.</p>
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-          <div class="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste">
-                I agree that this learner has seen the privacy notice and their learning profile can be updated to reflect this.
-              </label>
-            </div>
+    <h2 class="govuk-heading-m">Privacy notice</h2>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        You will not be able to view this learner’s Personal Learning Record unless they have seen the privacy notice
+        (opens in a new tab).
+      </strong>
+    </div>
+
+    <p class="govuk-body">It’s your legal obligation to confirm that they’ve seen the privacy notice before ticking the
+      box below.</p>
+    <p class="govuk-body">If you’re unable to confirm this, you can update this setting once they’re registered.</p>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              I agree that this learner has seen the privacy notice and their learning profile can be updated to reflect
+              this.
+            </label>
           </div>
-        </fieldset>
-      </div>
+        </div>
+      </fieldset>
+    </div>
 
 
 
     <a href="#" class="govuk-button show-continue">Register learner</a>
     <a href="#" class="govuk-button govuk-button--secondary">Cancel</a>
-</div>
+  </div>
 
 
-{% endblock %}
+  {% endblock %}

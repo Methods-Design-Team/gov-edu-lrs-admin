@@ -7,26 +7,24 @@ GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    {% include "menus/helpdesk/menu_top_organisations_firstline.html" %}
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
   </div>
 </div>
 
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
-    {% include "menus/helpdesk/menu_LHS_organisations_firstline.html" %}
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
   </div>
 
-<div class="govuk-grid-column-three-quarters">
+  <div class="govuk-grid-column-three-quarters">
 
-  <h1 class="govuk-heading-l">Manage applications</h1>
-  
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="width-20">
-      Search by organisation name, UKPRN or application reference
-    </label>
-    <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text"></div>
+    <h1 class="govuk-heading-l">Manage applications</h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-20">
+        Search by organisation name, UKPRN or application reference
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text"></div>
 
     <!--
     <div class="govuk-form-group">
@@ -73,7 +71,7 @@ GOV.UK Prototype Kit
             </div>
         </fieldset>
       </div>
-      
+
 
       <div class="govuk-grid-column-one-half">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -164,7 +162,8 @@ GOV.UK Prototype Kit
       <ul class="pagination">
         <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span
               aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
-        <li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true" aria-label="Page 1, current page">1</a></li>
+        <li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true"
+            aria-label="Page 1, current page">1</a></li>
         <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
         <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
         <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
@@ -183,147 +182,142 @@ GOV.UK Prototype Kit
         </tr>
       </thead>
 
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
 
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-3">
-            <a href="app_mgt_2_app_tab_first.html" class="govuk-link govuk-link--no-visited-state">
-              Weir Training
-            </a></h3>
-          <p>Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            Date received: 18 August 2020</p>
-        </td>
-        <td class="govuk-summary-list__actions">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3">
+              <a href="app_mgt_2_app_tab_first.html" class="govuk-link govuk-link--no-visited-state">
+                Weir Training
+              </a></h3>
+            <p>Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 18 August 2020</p>
+          </td>
+          <td class="govuk-summary-list__actions">
 
-          <strong class="govuk-tag govuk-tag--blue">
-            1st line
-          </strong>
+            <strong class="govuk-tag govuk-tag--blue">
+              1st line
+            </strong>
 
-        </td>
-      </tr>
+          </td>
+        </tr>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href="#">
-              Cherryleas Assessment Centre</a></h3>
-          <p>
-            Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            Date received: 02 August 2020</p>
-        </td>
-        <td class="govuk-summary-list__actions">
-          <strong class="govuk-tag govuk-tag--blue">
-            2nd line
-          </strong>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href="#">
+                Cherryleas Assessment Centre</a></h3>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 02 August 2020</p>
+          </td>
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--blue">
+              2nd line
+            </strong>
 
-        </td>
-      </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href=“#”>
-              Centre for Accelerated Learning</a></h3>
-          <p>
-            Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            Date received: 11 July 2020</p>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href=“#”>
+                Centre for Accelerated Learning</a></h3>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 11 July 2020</p>
 
-        </td>
+          </td>
 
-        <td class="govuk-summary-list__actions">
-          <strong class="govuk-tag govuk-tag--yellow">
-            Waiting on customer
-          </strong>
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Waiting on customer
+            </strong>
 
-        </td>
+          </td>
 
-        </td>
-      </tr>
+          </td>
+        </tr>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href="#">
-              Chesterfield Hospital School</a></h3>
-          <p>
-            Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            Date received: 30 June 2020</p>
-        </td>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href="#">
+                Chesterfield Hospital School</a></h3>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 30 June 2020</p>
+          </td>
 
-        <td class="govuk-summary-list__actions">
-          <strong class="govuk-tag govuk-tag--yellow">
-            Pending signature
-          </strong>
-        </td>
-      </tr>
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Pending signature
+            </strong>
+          </td>
+        </tr>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href="#">
-              Bluecoat Aspley Primary School</a></h3>
-          <p>
-            Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            Date received: 30 June 2020</p>
-        </td>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href="#">
+                Bluecoat Aspley Primary School</a></h3>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 30 June 2020</p>
+          </td>
 
-        <td class="govuk-summary-list__actions">
-          <strong class="govuk-tag govuk-tag--green">
-            Registered
-          </strong>
-        </td>
-      </tr>
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--green">
+              Registered
+            </strong>
+          </td>
+        </tr>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href="#">
-              St Luke's C of E First School</a></h3>
-          <p>
-            Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            Date received: 30 June 2020</p>
-        </td>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href="#">
+                St Luke's C of E First School</a></h3>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 30 June 2020</p>
+          </td>
 
-        <td class="govuk-summary-list__actions">
-          <strong class="govuk-tag govuk-tag--pink">
-            Rejected
-          </strong>
-        </td>
-      </tr>
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--pink">
+              Rejected
+            </strong>
+          </td>
+        </tr>
 
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href=“#”>
-              Tudor Grange</a></h3>
-          <p>
-            Application reference: 1234588<br>
-            Independent Learning Provider<br>
-            UKPRN: 87651234<br>
-            Date received: 30 June 2020</p>
-        </td>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href=“#”>
+                Tudor Grange</a></h3>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 30 June 2020</p>
+          </td>
 
-        <td class="govuk-summary-list__actions">
-          <strong class="govuk-tag govuk-tag--pink">
-            Timed out
-          </strong>
-        </td>
-      </tr>
-    
-  </tbody>
-</table>
-</div>
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--pink">
+              Timed out
+            </strong>
+          </td>
+        </tr>
 
-
-
-
-    
+      </tbody>
+    </table>
+  </div>
 
 
 
@@ -342,4 +336,9 @@ GOV.UK Prototype Kit
 
 
 
-{% endblock %}
+
+
+
+
+
+  {% endblock %}

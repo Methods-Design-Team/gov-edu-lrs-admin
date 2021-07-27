@@ -70,19 +70,16 @@ GOV.UK prototype kit
 
   -->
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      {% include "menus/helpdesk/menu_top_organisations_firstline.html" %}
-    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
   </div>
-  
-  
-  
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-quarter">
-      {% include "menus/helpdesk/menu_LHS_organisations_firstline.html" %}
-    </div>
+</div>
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
 
   <div class="govuk-grid-column-three-quarters">
 
@@ -108,7 +105,8 @@ GOV.UK prototype kit
               <a class="app-sub-navigation__link" href="app_mgt_2_app_tab_pending_signature.html">Application</a>
             </li>
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link" aria-current="page" href="app_mgt_2_timeline_tab_pending.html">Timeline</a>
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="app_mgt_2_timeline_tab_pending.html">Timeline</a>
             </li>
             <li class="app-sub-navigation__item">
               <a class="app-sub-navigation__link" href="app_mgt_2_notes_tab_pending.html">Additional notes</a>
@@ -116,7 +114,7 @@ GOV.UK prototype kit
           </ul>
         </nav>
 
-       <!--
+        <!--
         <div class="govuk-form-group">
           <h2 class="govuk-heading-m">Notes</h2>
           <div id="more-detail-hint" class="govuk-hint">
@@ -141,24 +139,24 @@ GOV.UK prototype kit
         <p>Signatory signature received<br><br> 30 Sep 2020</p>
         <hr>
 
-        --> 
+        -->
 
         <br>
         <h3 class="govuk-heading-s">Pending signature</h3>
         <p>Application approved pending signature<br><br> 30 Aug 2020</p>
         <hr>
-    
+
         <br>
         <h3 class="govuk-heading-s">Assigned to 2nd line</h3>
         <p>Application assigned to second line<br><br>24 Jul 2020</p>
         <hr>
-    
+
         <br>
         <h3 class="govuk-heading-s">Application received</h3>
         <p><br>21 Jun 2020 at 9:49pm</p>
         <hr>
-      
-        </div>
+
+      </div>
 
 
       {% endblock %}
