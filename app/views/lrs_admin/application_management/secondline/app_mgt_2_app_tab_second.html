@@ -8,7 +8,7 @@ GOV.UK prototype kit
 {% block content %}
 
 
-
+<!--
 <div>
   <nav class="app-lrs-navigation" aria-label="lrs navigation">
     <ul class="app-lrs-navigation__list">
@@ -62,7 +62,18 @@ GOV.UK prototype kit
     </ul>
 </div>
 
+-->
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
 
 
   <div class="govuk-grid-column-three-quarters">
@@ -561,10 +572,10 @@ GOV.UK prototype kit
           </div>
         </div>
 
-        <a href="app_mgt_2_app_tab_registered.html" class="govuk-button show-continue">Approve</a>
-        <a href="app_mgt_2_reasons_reject.html" class="govuk-button govuk-button--secondary">Reject</a>
-        <a href="app_mgt_2_reasons_first.html" class="govuk-button govuk-button--secondary">Assign to first line</a>
-        <a href="#" class="govuk-button govuk-button--secondary">Waiting on customer</a>
+        <a href="/lrs_admin/application_management/pending/app_mgt_2_app_tab_pending_signature.html" class="govuk-button show-continue">Approve</a>
+        <a href="/lrs_admin/application_management/rejected/app_mgt_2_reasons_reject.html" class="govuk-button govuk-button--secondary">Reject</a>
+        <a href="/lrs_admin/application_management/secondline/app_mgt_2_reasons_second.html" class="govuk-button govuk-button--secondary">Assign to second line</a>
+        <a href="/lrs_admin/application_management/waiting/app_mgt_2_reasons_waiting.html" class="govuk-button govuk-button--secondary">Waiting on customer</a>
 
 
       </div>
