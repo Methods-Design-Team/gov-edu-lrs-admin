@@ -1,0 +1,360 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <h1 class="govuk-heading-l">Manage applications</h1>
+
+    <div class="govuk-form-group">
+      <nav class="app-sub-navigation" aria-label="Sub navigation">
+        <ul class="app-sub-navigation__list">
+          <li class="app-sub-navigation__item">
+            <a class="app-sub-navigation__link" href="find-application.html">Find an application</a>
+          </li>
+          <li class="app-sub-navigation__item">
+            <a class="app-sub-navigation__link" aria-current="page" href="filter-results.html">Filter applications</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="govuk-form-group">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+        Filter applications by
+          </label>
+        </h2>
+
+
+
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <legend class="govuk-fieldset__legend">
+        Type of application
+        </legend>
+
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+  New application
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+      Renewal
+            </label>
+          </div>
+
+        </div>
+
+      </fieldset>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend">
+        Status
+          </legend>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="RAC" name="RAC" type="checkbox" value="a">
+              <label class="govuk-label govuk-checkboxes__label" for="RAC">
+              With 1st line team
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="RAC-2" name="waste" type="checkbox" value="b">
+              <label class="govuk-label govuk-checkboxes__label" for="RAC-2">
+              With 2nd line team
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="RAC-3" name="waste" type="checkbox" value="c">
+              <label class="govuk-label govuk-checkboxes__label" for="RAC-3">
+                Waiting on customer
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="RAC-3" name="waste" type="checkbox" value="d">
+              <label class="govuk-label govuk-checkboxes__label" for="RAC-4">
+                Pending signature
+              </label>
+            </div>
+
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-grid-column-one-half">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <div class="govuk-checkboxes" style="margin-top:40px">
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="RAC-3" name="waste" type="checkbox" value="e">
+              <label class="govuk-label govuk-checkboxes__label" for="RAC-5">
+                Registered
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="RAC-3" name="waste" type="checkbox" value="f">
+              <label class="govuk-label govuk-checkboxes__label" for="RAC-6">
+                Rejected
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="RAC-3" name="waste" type="checkbox" value="g">
+              <label class="govuk-label govuk-checkboxes__label" for="RAC-7">
+                Timed out
+              </label>
+            </div>
+
+
+
+          </div>
+        </fieldset>
+      </div>
+    </div>
+
+<br/>
+<br/>
+
+        <a href="#" class="govuk-button show-continue">Search</a>
+        <a href="#" class="govuk-button govuk-button--secondary">Clear</a>
+
+
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">   <h3 class="govuk-heading-s">Showing 1 - 5 of 25 applications</h3></th>
+          <th class="govuk-table__header" scope="col"> </th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3">
+              <a href="bluecoat-primary-renewal-ist.html" class="govuk-link govuk-link--no-visited-state">
+                  Bluecoat Aspley Primary School
+              </a></h3>
+                    <span class="govuk-caption-s">Application type: Renewal</span>
+            <p>Application reference: 1234588<br>
+              State-funded school<br>
+              UKPRN: 87651234<br>
+              Date received: 18 August 2020</p>
+          </td>
+          <td class="govuk-summary-list__actions">
+
+            <strong class="govuk-tag govuk-tag--blue">
+          With 1st line team
+            </strong>
+
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href="#">
+                Cherryleas Assessment Centre</a></h3>
+                    <span class="govuk-caption-s">Application type: Renewal</span>
+            <p>
+
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 02 August 2020</p>
+          </td>
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--blue">
+            With 2nd line team
+            </strong>
+
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-2"> <a class=“govuk-link--no-visited-state” href=“#”>
+                Centre for Accelerated Learning</a></h3>
+                    <span class="govuk-caption-s">Application type: New application</span>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 11 July 2020</p>
+
+          </td>
+
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Waiting on customer
+            </strong>
+
+          </td>
+
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href="#">
+                Chesterfield Hospital School</a></h3>
+                    <span class="govuk-caption-s">Application type: New application</span>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 30 June 2020</p>
+          </td>
+
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Pending signature
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href="weir-training-new-ist">
+                Weir Training</a></h3>
+                    <span class="govuk-caption-s">Application type: Renewal</span>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 30 June 2020</p>
+          </td>
+
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--green">
+              Registered
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href="#">
+                St Luke's C of E First School</a></h3>
+                    <span class="govuk-caption-s">Application type: New application</span>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 30 June 2020</p>
+          </td>
+
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--pink">
+              Rejected
+            </strong>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <h3 class="govuk-heading-m govuk-!-margin-bottom-3"> <a class=“govuk-link--no-visited-state” href=“#”>
+                Tudor Grange</a></h3>
+                    <span class="govuk-caption-s">Application type: Renewal</span>
+            <p>
+              Application reference: 1234588<br>
+              Independent Learning Provider<br>
+              UKPRN: 87651234<br>
+              Date received: 30 June 2020</p>
+          </td>
+
+          <td class="govuk-summary-list__actions">
+            <strong class="govuk-tag govuk-tag--pink">
+              Timed out
+            </strong>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <nav class="govuk-!-margin-top-9" role="navigation" aria-label="Pagination">
+
+      <ul class="pagination">
+
+        <li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true"
+            aria-label="Page 1, current page">1</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span
+              aria-hidden="true" role="presentation">&raquo;</span></a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+
+<style>
+  .govuk-summary-list__actions
+  {
+    width:auto;
+
+  }
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {% endblock %}
