@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">  Bluecoat Aspley Primary School</h1>
+
+
+        <nav class="app-sub-navigation" aria-label="Sub navigation">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="bluecoat-primary-renewal-pending-signature.html">Application</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="#">Timeline</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="additional-notes.html">Additional notes</a>
+            </li>
+          </ul>
+        </nav>
+
+       <!--
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">Notes</h2>
+          <div id="more-detail-hint" class="govuk-hint">
+
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+            aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <a href="app_mgt_2_notes_tab_2nd_line.html" class="govuk-button show-continue">Save</a>
+
+
+        <h3 class="govuk-heading-s">Registered</h3>
+        <p>Organisation is registered<br><br> 30 Nov 2020</p>
+        <hr>
+
+        <br>
+        <h3 class="govuk-heading-s">Status change</h3>
+        <p>Signatory signature received<br><br> 30 Sep 2020</p>
+        <hr>
+
+        <br>
+        <h3 class="govuk-heading-s">Status change</h3>
+        <p>Application approved pending signature<br><br> 30 Aug 2020</p>
+        <hr>
+
+        -->
+
+        <br>
+        <h3 class="govuk-heading-s">Assigned to 1st line</h3>
+        <p>Application assigned to 1st line<br><br>24 Jul 2020</p>
+        <hr>
+
+
+        <br>
+        <h3 class="govuk-heading-s">Application received</h3>
+        <p><br>21 Jun 2020 at 9:49pm</p>
+        <hr>
+
+        </div>
+
+
+      {% endblock %}

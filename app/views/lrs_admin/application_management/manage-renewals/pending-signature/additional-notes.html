@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">  Bluecoat Aspley Primary School</h1>
+
+
+
+        <nav class="app-sub-navigation" aria-label="Sub navigation">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="bluecoat-primary-renewal-pending-signature.html">Application</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="timeline.html">Timeline</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="#">Additional notes</a>
+            </li>
+          </ul>
+        </nav>
+
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">Add notes</h2>
+          <div id="more-detail-hint" class="govuk-hint">
+
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+            aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <a href="#" class="govuk-button show-continue">Save</a>
+
+
+        <br>
+        <br>
+        <h2 class="govuk-heading-m">Notes</h2>
+        <h3 class="govuk-heading-s">Note added by Bethany Johnson</h3>
+        <p>Certificate uploaded was blurry<br><br> 30 Apr 2021</p>
+        <hr>
+
+        <br>
+        <h3 class="govuk-heading-s">Note added by Bethany Johnson</h3>
+        <p>ICO number only included for parent organisation <br><br> 30 Aug 2020</p>
+        <hr>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    {% endblock %}

@@ -23,7 +23,9 @@ $govuk-assets-path: '/govuk/assets/';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .app-float-right {
+  font-size:19px;
   float:right;
+
 }
 
 .govuk-tag-right {
@@ -41,49 +43,49 @@ $govuk-assets-path: '/govuk/assets/';
 
 .app-sub-navigation {
     margin-bottom: govuk-spacing(7);
- 
+
   }
-  
-  
+
+
   .app-sub-navigation__list {
     font-size: 0; // Removes white space when using inline-block on child element.
     list-style: none;
     margin: 0;
     padding: 0;
-  
+
     @include govuk-media-query($from: 375px) {
       box-shadow: inset 0 -1px 0 $govuk-border-colour;
       width: 100%;
     }
-  
+
     // IE8 does not support box shadow, so use a standard border.
     @include govuk-if-ie8 {
       border-bottom: 1px solid $govuk-border-colour;
     }
-  
+
   }
-  
-  
+
+
   .app-sub-navigation__item {
     @include govuk-font(19);
     box-shadow: inset 0 -1px 0 $govuk-border-colour;
     display: block;
     margin-top: -1px;
-  
+
     &:last-child {
       box-shadow: none;
     }
-  
+
     @include govuk-media-query($from: 375px) {
       box-shadow: none;
       display: inline-block;
       margin-right: govuk-spacing(4);
       margin-top: 0;
     }
-  
+
   }
-  
-  
+
+
   .app-sub-navigation__link {
     @include govuk-link-common;
     @include govuk-link-style-default;
@@ -94,26 +96,26 @@ $govuk-assets-path: '/govuk/assets/';
     text-decoration: none;
     position: relative;
     font-weight: bold;
-  
+
     @include govuk-media-query($from: 375px) {
       padding-left: 0;
     }
-  
+
     &:link,
     &:visited {
       color: $govuk-link-colour;
     }
-  
+
     &:hover {
       color: govuk-colour('black')
     }
-  
+
     &:focus {
       color: govuk-colour("black"); // Focus colour on yellow should really be black.
       position: relative; // Ensure focus sits above everything else.
       box-shadow: none;
     }
-  
+
     &:focus:before {
       background-color: govuk-colour("black");
       content: "";
@@ -122,15 +124,15 @@ $govuk-assets-path: '/govuk/assets/';
       position: absolute; bottom: 0; left: 0; right: 0;
       height: 5px;
     }
-  
+
   }
-  
-  
+
+
   .app-sub-navigation__link[aria-current="page"] {
     color: $govuk-link-active-colour;
     position: relative;
     text-decoration: none;
-  
+
     &:before {
       background-color: $govuk-link-colour;
       content: "";
@@ -138,18 +140,18 @@ $govuk-assets-path: '/govuk/assets/';
       height: 100%;
       position: absolute; bottom: 0; left: 0;
       width: 5px;
-  
+
       @include govuk-media-query($from: 375px) {
         height: 5px;
         width: 100%;
       }
-  
+
     }
-  
+
     &:focus:before {
       background-color: govuk-colour("black");
     }
-  
+
   }
 
 
@@ -160,49 +162,49 @@ $govuk-assets-path: '/govuk/assets/';
   .app-lrs-navigation {
     margin-bottom: govuk-spacing(7);
     background-color: #f8f8f8;
- 
+
   }
-  
-  
+
+
   .app-lrs-navigation__list {
     font-size: 0; // Removes white space when using inline-block on child element.
     list-style: none;
     margin: 0;
     padding: 0;
-  
+
     @include govuk-media-query($from: 375px) {
       box-shadow: inset 0 -1px 0 $govuk-border-colour;
       width: 100%;
     }
-  
+
     // IE8 does not support box shadow, so use a standard border.
     @include govuk-if-ie8 {
       border-bottom: 1px solid $govuk-border-colour;
     }
-  
+
   }
-  
-  
+
+
   .app-lrs-navigation__item {
     @include govuk-font(19);
     box-shadow: inset 0 -1px 0 $govuk-border-colour;
     display: block;
     margin-top: -1px;
-  
+
     &:last-child {
       box-shadow: none;
     }
-  
+
     @include govuk-media-query($from: 375px) {
       box-shadow: none;
       display: inline-block;
       margin-right: govuk-spacing(4);
       margin-top: 0;
     }
-  
+
   }
-  
-  
+
+
   .app-lrs-navigation__link {
     @include govuk-link-common;
     @include govuk-link-style-default;
@@ -213,26 +215,26 @@ $govuk-assets-path: '/govuk/assets/';
     text-decoration: none;
     position: relative;
     font-weight: bold;
-  
+
     @include govuk-media-query($from: 375px) {
       padding-left: 0;
     }
-  
+
     &:link,
     &:visited {
       color: $govuk-link-colour;
     }
-  
+
     &:hover {
       color: govuk-colour('black')
     }
-  
+
     &:focus {
       color: govuk-colour("black"); // Focus colour on yellow should really be black.
       position: relative; // Ensure focus sits above everything else.
       box-shadow: none;
     }
-  
+
     &:focus:before {
       background-color: govuk-colour("black");
       content: "";
@@ -241,15 +243,15 @@ $govuk-assets-path: '/govuk/assets/';
       position: absolute; bottom: 0; left: 0; right: 0;
       height: 5px;
     }
-  
+
   }
-  
-  
+
+
   .app-lrs-navigation__link[aria-current="page"] {
     color: $govuk-link-active-colour;
     position: relative;
     text-decoration: none;
-  
+
     &:before {
       background-color: $govuk-link-colour;
       content: "";
@@ -257,37 +259,37 @@ $govuk-assets-path: '/govuk/assets/';
       height: 100%;
       position: absolute; bottom: 0; left: 0;
       width: 5px;
-  
+
       @include govuk-media-query($from: 375px) {
         height: 5px;
         width: 100%;
       }
-  
+
     }
-  
+
     &:focus:before {
       background-color: govuk-colour("black");
     }
-  
+
   }
 
   .pagination .pagination_list-items {
 
     li {
       display: inline-block;
-  
+
       a {
         color: #005EA5;
         display: inline-block;
         padding: 15px 5px 10px 5px;
         margin-right: 15px;
         text-decoration: none;
-  
+
         &:focus {
           outline: 0;
         }
       }
-  
+
       &.active a,
       &.active a:hover {
         color: #005EA5;
@@ -297,38 +299,38 @@ $govuk-assets-path: '/govuk/assets/';
       }
     }
   }
-  
+
   .padding {
     padding-left: 15px;
   }
-  
+
   .pagination {
     padding: 0;
   }
-  
+
   .pagination__item {
     display: inline-block;
     list-style: none;
   }
-  
+
   .pagination__link {
     display: block;
     padding: 5px 10px;
     text-decoration: none;
-  
+
     &:hover,
     &:focus {
       background: #F8F8F8;
       outline: 3px solid #FFBF47;
     }
-  
+
     &.current {
       color: #0B0C0C;
       font-weight: 700;
       border: none;
       pointer-events: none;
       cursor: default;
-  
+
       &:hover,
       &:focus {
         color: #0B0C0C;
@@ -336,17 +338,17 @@ $govuk-assets-path: '/govuk/assets/';
       }
     }
   }
-  
+
   .pagination__summary {
     font-family: 'Inter UI', sans-serif;
     -webkit-font-smoothing: antialiased;
     padding: 8px 0;
-  
+
     @media (min-width: 642px) {
       float: right;
     }
   }
-  
+
   .providerResults-details span {
     margin-right: 10px;
   }
