@@ -1,0 +1,325 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: serviceUrl or "/",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "https://lrs-test10.dev.lrs.education.gov.uk/Pages/WhatsNew",
+      text: "Help"
+    },
+    {
+      href: "#",
+      text: "What's new"
+    },
+    {
+      href: "#",
+      text: "My account"
+    },
+    {
+      href: "#",
+      text: "Log out"
+    }
+  ]
+  }) }}
+  
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype",
+      classes: "govuk-tag--pink"
+    },
+    html: 'This is not a full service. It is not production code and you might experience problems.',
+    classes: 'govuk-width-container'
+  }) }}
+  <div class="grey">
+    <div class="govuk-width-container">
+      <nav class="app-navigation govuk-clearfix govuk-width-container" style="max-width: 100%;" title="Navigation menu between learner and achievement management.">
+
+        <ul class="app-navigation__list app-width-container" style="left: -15px; list-style: none; margin: 0px auto; max-width: 1200px; padding: 0px; position: relative;">
+
+        <li class="app-navigation__list-item app-navigation__list-item--current" style="border-bottom: 4px solid rgb(29, 112, 184); box-sizing: border-box; display: block; float: left; height: 50px; line-height: 50px; padding: 0px 15px; position: relative;">
+        <a id="learnermanagement_menu" href="#" class="govuk-link govuk-link--no-visited-state app-navigation__link">Learner Management</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+        <a id="achievementmanagement_menu" href="#" class="govuk-link govuk-link--no-visited-state app-navigation__link">Achievement Management</a>
+        </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="govuk-width-container govuk-!-margin-top-3">
+    <div class="govuk-breadcrumbs govuk-!-margin-top-0">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Manage users</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+
+      <div id="sub-menu">
+        <div class="app-pane__subnav">
+
+          <nav aria-label="Main Navigation" id="subNavigation" class="app-subnav">
+            <a href="#main-content" class="govuk-skip-link govuk-skip-link-left-navigation">Skip menu</a>
+
+            <ul class="app-subnav__section">
+              <li class="app-subnav__section-item">
+                <a href="welcome.html" class="app-subnav__link govuk-link govuk-link--no-visited-state">Welcome</a>
+              </li>
+            </ul>
+
+            <h4 class="app-subnav__theme">Learner Management</h4>
+            <ul class="app-subnav__section">
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Find a learner by personal details</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Find a learner by ULN</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="/LearnerManagement/Pages/RegisterALearner" class="app-subnav__link govuk-link govuk-link--no-visited-state">Find a learner by NOMIS ID</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Find a learner by personal details helpdesk</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Find a learner by ULN helpdesk</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Find a learner by UCI helpdesk</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Find a learner by UPN helpdesk</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Find Data Challenge</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Register Learner</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Submit Batch File</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">View Batch Files</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">View Exceptions</a>
+              </li>
+
+            </ul>
+
+            <h4 class="app-subnav__theme">Organisation Management</h4>
+            <ul class="app-subnav__section">
+
+              <li class="app-subnav__section-item">
+                <a href="what-is-ukprn.html" class="app-subnav__link govuk-link govuk-link--no-visited-state">Find Organisation</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="what-is-ukprn.html" class="app-subnav__link govuk-link govuk-link--no-visited-state">Create Organisation</a>
+              </li>
+
+            </ul>
+
+            <h4 class="app-subnav__theme">Learner Verification</h4>
+            <ul class="app-subnav__section">
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Verify Single Learner</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Submit Batch Job</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">View Batch Jobs</a>
+              </li>
+
+            </ul>
+
+            <h4 class="app-subnav__theme">Service Tools</h4>
+            <ul class="app-subnav__section">
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Merge / Unmerge Learner</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Maintain Prohibited Values</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Maintain Sensitive Values</a>
+              </li>
+
+            </ul>
+
+
+            <h4 class="app-subnav__theme">User Management</h4>
+            <ul class="app-subnav__section">
+
+              <li class="app-subnav__section-item app-subnav__section-item--current">
+                <a href="what-is-ukprn.html" class="app-subnav__link govuk-link govuk-link--no-visited-state" style="font-weight: 700;">Manage users</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Create a user</a>
+              </li>
+
+            </ul>
+
+            <h4 class="app-subnav__theme">Web Services</h4>
+            <ul class="app-subnav__section">
+
+              <li class="app-subnav__section-item">
+                <a href="#" class="app-subnav__link govuk-link govuk-link--no-visited-state">Certificate Management</a>
+              </li>
+
+            </ul>
+
+          </nav>
+
+         </div><!--app pane sub nav -->
+        </div> <!--sub menu -->
+        </div>  <!-- sub-menu ends -->
+      
+
+
+        <div class="govuk-grid-column-two-thirds">
+
+      
+          <!-- <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-8" style="vertical-align: middle;">Email verified</strong> -->
+  
+          <span class="govuk-caption-l govuk-!-margin-bottom-1">Username: SMITHJ</span>
+          <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Jesse Smith</h1>
+  
+  
+          <nav class="app-navigation govuk-clearfix govuk-!-margin-bottom-4" style="box-shadow: #b1b4b6 0 -1px 0 inset; background-color: #ffffff;">
+  
+            <ul class="app-navigation__list app-width-container" style="left: 0; list-style: none; box-shadow: #b1b4b6 0 -1px 0 inset; width:100%;">
+      
+              <li class="app-navigation__list-item">
+                <a id="learnermanagement_menu" href="jesse_smith.html" class="govuk-link govuk-link--no-visited-state app-navigation__link">Account details</a>
+              </li>
+        
+              <li class="app-navigation__list-item app-navigation__list-item--current">
+                <a id="achievementmanagement_menu" href="notes.html" class="govuk-link govuk-link--no-visited-state app-navigation__link">Notes (2)</a>
+              </li>
+            </ul>
+          </nav>
+
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-4">Notes</h2>
+
+          <div class="govuk-form-group govuk-!-margin-bottom-3">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                Add a note
+              </label>
+            </h1>
+            <div id="more-detail-hint" class="govuk-hint">
+              
+            </div>
+            <textarea class="govuk-textarea govuk-!-margin-bottom-3" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+
+        
+          <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Save note"
+            }) }}
+          </div>
+
+          <h2 class="govuk-heading-m govuk-!-margin-top-4">Previous notes</h2>
+        
+          <div class="govuk-!-margin-bottom-6">
+            <!-- <img src="/public/images/user.png" class="govuk-!-margin-right-3" style="width: 50px; float: left;" alt=""> -->
+            <p class="govuk-!-font-weight-bold govuk-!-margin-bottom-1">Adam Smith</p>
+            <p class="govuk-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel iusto cupiditate voluptatum.</p>
+            <p class="govuk-body-s govuk-!-margin-top-1">27 10 2021, 2:31pm</p>
+            <div class="govuk-button-group">
+              <!-- {{ govukButton({
+                text: "Edit note",
+                href: "edit_note"
+              }) }} -->
+              <!-- <a class="govuk-link" href="edit_note">Edit note</a> -->
+              {{ govukButton({
+                text: "Delete note",
+                classes: "govuk-button--warning",
+                href: "delete_note"
+              }) }}
+              
+            </div>
+          </div>
+          
+
+          <div class="govuk-!-margin-bottom-6">
+            <p class="govuk-!-font-weight-bold govuk-!-margin-bottom-1">Alfred Marshall</p>
+            <p class="govuk-body">Dolor sit amet consectetur adipisicing elit. Deleniti suscipit harum explicabo, repudiandae nostrum iusto.</p>
+            <p class="govuk-body-s govuk-!-margin-top-1">25 10 2021, 1:40pm</p>
+            <!-- <div class="govuk-button-group">
+              <a class="govuk-link" href="edit_note">Edit note</a>
+              {{ govukButton({
+                text: "Delete note",
+                classes: "govuk-button--warning"
+              }) }}
+            </div> -->
+          </div>
+
+
+         
+        </div> <!-- govuk-grid-column-two-thirds ends -->
+ 
+
+
+
+      </div> <!-- grid row ends -->
+    </div> <!-- grid row ends -->
+  </maim> <!-- main wrapper ends -->
+</div> <!-- container ends -->
+ 
+
+<script>
+  const nav = document.querySelector('nav');
+  const div = document.createElement('div');
+
+  div.textContent = 'Adam Smith, Admin';
+  nav.prepend(div);
+  div.style.textAlign = 'right';
+
+  const govukWidthContainer = document.querySelectorAll('.govuk-width-container');
+  
+  govukWidthContainer.forEach(govukWidthContainer => {
+    govukWidthContainer.setAttribute('style','max-width: 1200px;');
+  })
+
+</script>
+
+{% endblock %}
