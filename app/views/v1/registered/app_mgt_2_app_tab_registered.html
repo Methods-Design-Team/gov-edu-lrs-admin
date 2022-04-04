@@ -8,6 +8,66 @@ GOV.UK prototype kit
 {% block content %}
 
 
+<!--
+<div>
+  <nav class="app-lrs-navigation" aria-label="lrs navigation">
+    <ul class="app-lrs-navigation__list">
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_1_learners_tab.html">Learners</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" aria-current="page"
+          href="/menus/helpdesk/menu_hd_secondline_2_organisations_tab.html">Organisations</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_3_datachallenges_tab.html">Data
+          challenges</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_4_servicetools_tab.html">Service
+          tools</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link"
+          href="/menus/helpdesk/menu_hd_secondline_5_achievements_tab.html">Achievements</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_6_admin_tab.html">Admin</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_7_webservices_tab.html">Web
+          services</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p class="govuk-body">Organisation management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="app_mgt_1_search.html">Manage applications</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="org_mgt_1_search.html">Find organisation</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Add organisation</a>
+      </li>
+    </ul>
+
+    <br>
+    <p class="govuk-body">User management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Add or remove a user</a>
+      </li>
+    </ul>
+  </div>
+
+  -->
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -20,15 +80,20 @@ GOV.UK prototype kit
     {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
   </div>
 
+
   <div class="govuk-grid-column-three-quarters">
 
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <span id="dob-hint" class="govuk-hint">
+        Application reference: 1234567
+      </span>
+    </legend>
 
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl"> Weir Training
-          <!--<span class="govuk-caption-xl">Application renewal</span>-->
+        <h1 class="govuk-heading-xl">Weir Training
         </h1>
 
 
@@ -37,63 +102,19 @@ GOV.UK prototype kit
         <nav class="app-sub-navigation" aria-label="Sub navigation">
           <ul class="app-sub-navigation__list">
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link" aria-current="page" href="#">Application</a>
+              <a class="app-sub-navigation__link" aria-current="page"
+                href="app_mgt_2_app_tab_registered.html">Application</a>
             </li>
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link" href="#">Timeline</a>
+              <a class="app-sub-navigation__link" href="app_mgt_2_timeline_tab_registered.html">Timeline</a>
             </li>
             <li class="app-sub-navigation__item">
-              <a class="app-sub-navigation__link" href="#">Additional notes</a>
+              <a class="app-sub-navigation__link" href="app_mgt_2_notes_tab_registered.html">Additional notes</a>
             </li>
           </ul>
         </nav>
 
-        <!--Application details-->
-        <h2 class="govuk-heading-m govuk-!-margin-top-9">Application details</h2>
-        <dl class="govuk-summary-list">
-<div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Application reference
-            </dt>
-            <dd class="govuk-summary-list__value">
 
-                1234567
-
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-                      <dt class="govuk-summary-list__key">
-                      Type of application
-                      </dt>
-                      <dd class="govuk-summary-list__value">
-
-                        New
-
-                      </dd>
-                    </div>
-                    <div class="govuk-summary-list__row">
-                                <dt class="govuk-summary-list__key">
-                                Date received
-                                </dt>
-                                <dd class="govuk-summary-list__value">
-
-                              30 June 2020
-
-                                </dd>
-                              </div>
-                    <div class="govuk-summary-list__row">
-                      <dt class="govuk-summary-list__key">
-                        Status
-                      </dt>
-                      <dd class="govuk-summary-list__value">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          awaiting 1st line review
-                        </strong>
-                      </dd>
-                    </div>
-                  </dl>
-
-        <!--Organisation details-->
         <h2 class="govuk-heading-m govuk-!-margin-top-9">Organisation details</h2>
 
 
@@ -113,76 +134,83 @@ GOV.UK prototype kit
 
           -->
 
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Status
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag govuk-tag--green">
+                  Registered
+                </strong>
+              </dd>
+            </div>
 
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                UKPRN
+              </dt>
+              <dd class="govuk-summary-list__value">
+                12345678
+              </dd>
+            </div>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              UKPRN
-            </dt>
-            <dd class="govuk-summary-list__value">
-              12345678
-            </dd>
-          </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Provider type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Independent Training Provider
+              </dd>
+            </div>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Provider type
-            </dt>
-            <dd class="govuk-summary-list__value">
-          Independent Training Provider
-            </dd>
-          </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">Alpha 319,
+                  Chobham Business Centre,
+                  Chertsey Road,
+                  Chobham,
+                  Surrey,
+                  GU24 8JB</p>
+              </dd>
+            </div>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body">Alpha 319,
-                Chobham Business Centre,
-                Chertsey Road,
-                Chobham,
-                Surrey,
-                GU24 8JB</p>
-            </dd>
-          </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Location
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">England</p>
+              </dd>
+            </div>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Country
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body">England</p>
-            </dd>
-          </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Company number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                12345678
+              </dd>
+            </div>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Company number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              12345678
-            </dd>
-          </div>
-
-        <!--  <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Parent organisation
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Weir Trust
-            </dd>
-          </div>-->
-
-
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Parent organisation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Weir Trust
+              </dd>
+            </div>
 
         </dl>
 
-        <br>
-        <br>
 
 
-        <!--Organisation verifiers-->
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Verifiers</h2>
+        <!--<a class="app-float-right" href="#">Change</a>-->
+
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -191,32 +219,14 @@ GOV.UK prototype kit
             <dd class="govuk-summary-list__value">
               1108311
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change
-                <span class="govuk-visually-hidden"> address</span>
-              </a>
-            </dd>
           </div>
         </dl>
 
-        <div class="govuk-checkboxes govuk-!-margin-bottom-9">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="checked" name="checked" type="checkbox" value="checked">
-            <label class="govuk-label govuk-checkboxes__label" for="checked">
-              I’ve checked this ICO number on the <a href="https://ico.org.uk/ESDWebPages/search/">public register</a>
-            </label>
-          </div>
-        </div>
-<br/>
 
 
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-three-quarters">
-            <h2 class="govuk-heading-m">Reasons for access</h2>
-          </div>
-
-        </div>
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Reasons for access</h2>
+        <!--<a class="app-float-right" href="#">Change</a>-->
 
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
@@ -229,11 +239,10 @@ GOV.UK prototype kit
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> access to LRS</span>
+                <!--Change--><span class="govuk-visually-hidden"> access to LRS</span>
               </a>
             </dd>
           </div>
-
 
           <div class="govuk-summary-list__row">
 
@@ -245,7 +254,7 @@ GOV.UK prototype kit
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> awarding body </span>
+                <!--Change--><span class="govuk-visually-hidden"> awarding body </span>
               </a>
             </dd>
           </div>
@@ -257,12 +266,13 @@ GOV.UK prototype kit
             </dt>
             <dd class="govuk-summary-list__value">
               <a class="govuk-link" href="#">
-                OCR_accration.pdf
+                OCR_accr
+                <!--Change-->ation.pdf
               </a>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> uploaded file</span>
+                <!--Change--><span class="govuk-visually-hidden"> uploaded file</span>
               </a>
             </dd>
           </div>
@@ -272,36 +282,23 @@ GOV.UK prototype kit
               Estimated learners
             </dt>
             <dd class="govuk-summary-list__value">
-              150
+              2000
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">estimated learners</span>
+                <!--Change--><span class="govuk-visually-hidden">estimated learners</span>
               </a>
             </dd>
           </div>
         </dl>
-        </td>
 
-        <div class="govuk-checkboxes govuk-!-margin-bottom-9">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="checked" name="checked" type="checkbox" value="checked">
-            <label class="govuk-label govuk-checkboxes__label" for="checked">
-              I’m satisfied that the reasons for access are valid
-            </label>
-          </div>
-        </div>
 
-        <!--Application owner-->
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-three-quarters">
-            <h2 class="govuk-heading-m">Application owner</h2>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <a class ="app-float-right" href="#">Change</a>
-          </div>
-        </div>
+        <br>
+        <br>
 
+
+        <h2 class="govuk-heading-m">Application owner</h2>
+        <a class="app-float-right" href="app_mgt_change_detail.html"></a>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
@@ -332,7 +329,6 @@ GOV.UK prototype kit
               </a>
             </dd>
           </div>
-
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -366,18 +362,58 @@ GOV.UK prototype kit
 
         </dl>
 
+        <h2 class="govuk-heading-m">Super user</h2>
+        <a class="app-float-right" href="app_mgt_change_detail.html"></a>
 
-
-
-        <!--DPO-->
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-three-quarters">
-            <h2 class="govuk-heading-m">Data protection officer</h2>
+        <dl class="govuk-summary-list ">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Jane Smith
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                <!--Change--><span class="govuk-visually-hidden"></span>
+              </a>
+            </dd>
           </div>
-          <div class="govuk-grid-column-one-quarter">
-            <a class ="app-float-right" href="/lrs_admin/change/change_dpo.html">Change</a>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              0789 997 6604
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                <span class="govuk-visually-hidden"></span>
+              </a>
+            </dd>
           </div>
-        </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="mailto:tcurtis@weirtraining.co.uk">jsmith@weirtraining.co.uk</a>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                <span class="govuk-visually-hidden"> </span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <br>
+        <br>
+
+        <h2 class="govuk-heading-m">Data Protection officer</h2>
+        <a class="app-float-right" href="app_mgt_change_detail.html"></a>
 
         <dl class="govuk-summary-list ">
           <div class="govuk-summary-list__row">
@@ -426,15 +462,8 @@ GOV.UK prototype kit
         <br>
         <br>
 
-        <!--Signatory-->
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-three-quarters">
-            <h2 class="govuk-heading-m">Agreement signatory</h2>
-          </div>
-          <div class="govuk-grid-column-one-quarter">
-            <a class ="app-float-right" href="/lrs_admin/change/index_change_signatory.html">Change</a>
-          </div>
-        </div>
+        <h2 class="govuk-heading-m">Agreement signatory</h2>
+        <a class="app-float-right" href="app_mgt_change_detail.html"></a>
 
         <dl class="govuk-summary-list ">
           <div class="govuk-summary-list__row">
@@ -479,21 +508,6 @@ GOV.UK prototype kit
             </dd>
           </div>
         </dl>
-
-        <div class="govuk-checkboxes govuk-!-margin-bottom-9">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="checked" name="checked" type="checkbox" value="checked">
-            <label class="govuk-label govuk-checkboxes__label" for="checked">
-              I've checked this signatory is an officer or person with significant control on Companies House
-            </label>
-          </div>
-        </div>
-
-        <a href="#" class="govuk-button show-continue">Approve</a>
-        <a href="#" class="govuk-button govuk-button--secondary">Reject</a>
-        <a href="#" class="govuk-button govuk-button--secondary">Assign to second line</a>
-        <a href="#" class="govuk-button govuk-button--secondary">Waiting on customer</a>
-
 
       </div>
 

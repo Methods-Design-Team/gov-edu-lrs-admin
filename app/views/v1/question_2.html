@@ -1,0 +1,136 @@
+
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <h1 class="govuk-heading-xl">  Bluecoat Aspley Primary School</h1>
+
+
+
+
+          <nav class="app-sub-navigation" aria-label="Sub navigation">
+            <ul class="app-sub-navigation__list">
+              <li class="app-sub-navigation__item">
+                <a class="app-sub-navigation__link" aria-current="page" href="#">Application</a>
+              </li>
+              <li class="app-sub-navigation__item">
+                <a class="app-sub-navigation__link" href="timeline.html">Timeline</a>
+              </li>
+              <li class="app-sub-navigation__item">
+                <a class="app-sub-navigation__link" href="additional-notes.html">Additional notes</a>
+              </li>
+            </ul>
+          </nav>
+
+
+
+
+          <form action="question_4-branch" method="post" novalidate data-validate='my-form-validation'>
+              <h3 class="govuk-heading-m">Update application status</h3>
+
+              {% set emailHtml %}
+        {{ govukTextarea({
+            id: "contact-by-email",
+            name: "contact-by-email",
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false,
+            label: {
+            text: "Reason"
+            }
+            }) }}
+            {% endset -%}
+
+            {% set phoneHtml %}
+             {{ govukTextarea({
+            id: "contact-by-phone",
+            name: "contact-by-phone",
+            type: "tel",
+            autocomplete: "tel",
+            classes: "govuk-!-width-one-third",
+            label: {
+            text: "Reason"
+            }
+            }) }}
+            {% endset -%}
+
+
+              {{ govukRadios({
+                  classes: "govuk-radios",
+                  idPrefix: "question_4-gias",
+                  name: "question_4-gias",
+                  fieldset: {
+                      legend: {
+                          text: "",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--l"
+                      }
+                  },
+
+                  items: [
+                      {
+                          value: "Yes",
+                          text: "Reject the application",
+                          id: "question_4-gias-yes",
+
+                          checked: checked("nqt-after-itt", "yes"),
+                          conditional: {
+      html: emailHtml
+    }
+                      },
+                      {
+                          value: "No",
+                          text: "Update application status to 'waiting on customer'",
+                          id: "question_4-gias-no",
+                          checked: checked("nqt-after-itt", "no"),
+                          conditional: {
+      html: emailHtml
+    }
+                      }
+                  ]
+              }) }}
+
+              <div class="govuk-button-group">
+                {{ govukButton({
+                  text: "Continue"
+                }) }}
+                <a class="govuk-link govuk-!-margin-left-3" href="start.html">Back</a>
+              </div>
+          </form>
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+      {% endblock %}
