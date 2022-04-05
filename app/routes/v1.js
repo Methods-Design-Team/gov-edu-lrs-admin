@@ -27,9 +27,9 @@ router.post(`/v${verNum}/question_4-branch`, function (req, res) {
     const checkGias = req.session.data['question_4-gias'];
 
     if (checkGias === 'No') {
-        res.redirect(`/v${verNum}/bluecoat-primary-agreememt-waiting`);
-    } else {
         res.redirect(`/v${verNum}/bluecoat-primary-agreememt-rejected`);
+    } else {
+        res.redirect(`/v${verNum}/bluecoat-primary-agreememt-waiting`);
     }
 
 

@@ -40,10 +40,10 @@ GOV.UK prototype kit
                 <a class="app-sub-navigation__link" aria-current="page" href="#">Application</a>
               </li>
               <li class="app-sub-navigation__item">
-                <a class="app-sub-navigation__link" href="timeline.html">Timeline</a>
+                <a class="app-sub-navigation__link" href="timeline.html">History</a>
               </li>
               <li class="app-sub-navigation__item">
-                <a class="app-sub-navigation__link" href="additional-notes.html">Additional notes</a>
+                <a class="app-sub-navigation__link" href="additional-notes.html">Add a note</a>
               </li>
             </ul>
           </nav>
@@ -62,7 +62,7 @@ GOV.UK prototype kit
             autocomplete: "email",
             spellcheck: false,
             label: {
-            text: "Reason"
+            text: "Why are you contacting the customer? You must provide a reason."
             }
             }) }}
             {% endset -%}
@@ -73,9 +73,8 @@ GOV.UK prototype kit
             name: "contact-by-phone",
             type: "tel",
             autocomplete: "tel",
-            classes: "govuk-!-width-one-third",
             label: {
-            text: "Reason"
+            text: "Why are you rejecting the application? You must provide a reason."
             }
             }) }}
             {% endset -%}
@@ -96,7 +95,7 @@ GOV.UK prototype kit
                   items: [
                       {
                           value: "Yes",
-                          text: "Reject the application",
+                          text: "Contact the customer",
                           id: "question_4-gias-yes",
 
                           checked: checked("nqt-after-itt", "yes"),
@@ -106,11 +105,11 @@ GOV.UK prototype kit
                       },
                       {
                           value: "No",
-                          text: "Update application status to 'waiting on customer'",
+                          text: "Reject the application",
                           id: "question_4-gias-no",
                           checked: checked("nqt-after-itt", "no"),
                           conditional: {
-      html: emailHtml
+      html: phoneHtml
     }
                       }
                   ]
