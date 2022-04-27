@@ -1,0 +1,190 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+
+<!--
+<div>
+  <nav class="app-lrs-navigation" aria-label="lrs navigation">
+    <ul class="app-lrs-navigation__list">
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_1_learners_tab.html">Learners</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" aria-current="page"
+          href="/menus/helpdesk/menu_hd_secondline_2_organisations_tab.html">Organisations</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_3_datachallenges_tab.html">Data
+          challenges</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_4_servicetools_tab.html">Service
+          tools</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link"
+          href="/menus/helpdesk/menu_hd_secondline_5_achievements_tab.html">Achievements</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_6_admin_tab.html">Admin</a>
+      </li>
+      <li class="app-lrs-navigation__item">
+        <a class="app-lrs-navigation__link" href="/menus/helpdesk/menu_hd_secondline_7_webservices_tab.html">Web
+          services</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p class="govuk-body">Organisation management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="app_mgt_1_search.html">Manage applications</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="org_mgt_1_search.html">Find organisation</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Add organisation</a>
+      </li>
+    </ul>
+
+    <br>
+    <p class="govuk-body">User management</p>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">Add or remove a user</a>
+      </li>
+    </ul>
+  </div>
+
+  -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
+
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">  Bluecoat Aspley Primary School</h1>
+
+
+        <h2 class="govuk-heading-m"></h2>
+
+        <nav class="app-sub-navigation" aria-label="Sub navigation">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="#">Application</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="timeline.html">History</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="additional-notes.html">Add a note</a>
+            </li>
+          </ul>
+        </nav>
+
+          <h2 class="govuk-heading-m">Waiting on customer</h2>
+
+
+  <h3 class="govuk-heading-s">Reason added by Bethany Johnson - 30 Aug 2020</h3>
+          <p> Need to check signatory details with the applicant as the signatory provided in the application is not listed on GIAS.</p>
+
+
+          <form action="question_5-branch" method="post" novalidate data-validate='my-form-validation'>
+              <h3 class="govuk-heading-m">Have you heard back from the customer?</h3>
+              {% set detailsHtml %}
+               {{ govukTextarea({
+              id: "contact-by-phone",
+              name: "contact-by-phone",
+              type: "tel",
+              autocomplete: "tel",
+              label: {
+              text: "Add notes on why you are rejecting this application"
+              }
+              }) }}
+              {% endset -%}
+
+              {{ govukRadios({
+                  classes: "govuk-radios",
+                  idPrefix: "question_1-gias",
+                  name: "question_1-gias",
+                  fieldset: {
+                      legend: {
+                          text: "",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--l"
+                      }
+                  },
+
+                  items: [
+                      {
+                          value: "Yes",
+                          text: " Yes - and I approve this application",
+                          id: "question_1-gias-yes",
+                          checked: checked("nqt-after-itt", "yes")
+                      },
+                      {
+                          value: "No",
+                          text: "Yes - But I am rejecting this application",
+                          id: "question_1-gias-no",
+                          checked: checked("nqt-after-itt", "no"),
+                          conditional: {html: detailsHtml}
+                      },
+                      {
+                          value: "maybe",
+                          text: "No",
+                          id: "question_1-gias-no",
+                          checked: checked("nqt-after-itt", "no")
+                      }
+                  ]
+              }) }}
+
+              <div class="govuk-button-group">
+                {{ govukButton({
+                  text: "Continue"
+                }) }}
+                <a class="govuk-link govuk-!-margin-left-3" href="bluecoat-primary-agreememt-waiting">Back</a>
+              </div>
+          </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {% endblock %}

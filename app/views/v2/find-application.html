@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <h1 class="govuk-heading-l">Manage applications</h1>
+
+    <div class="govuk-form-group">
+      <nav class="app-sub-navigation" aria-label="Sub navigation">
+        <ul class="app-sub-navigation__list">
+          <li class="app-sub-navigation__item">
+            <a class="app-sub-navigation__link" aria-current="page" href="app_mgt_2_app_tab_first_line.html">Find an application</a>
+          </li>
+          <li class="app-sub-navigation__item">
+            <a class="app-sub-navigation__link" href="filter-results.html">Filter applications</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+          Find an application
+          </label>
+        </h2>
+        <div id="event-name-hint" class="govuk-hint">
+          Search by organisation name, UKPRN or application reference.
+        </div>
+       <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+      </div>
+
+
+
+
+
+    <br/>
+        <br/>
+
+    <a href="bluecoat-primary" class="govuk-button show-continue">Search</a>
+    <a href="#" class="govuk-button govuk-button--secondary">Clear</a>
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {% endblock %}

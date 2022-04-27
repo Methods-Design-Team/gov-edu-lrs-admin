@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
+
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">  Bluecoat Aspley Primary School</h1>
+
+
+
+        <nav class="app-sub-navigation" aria-label="Sub navigation">
+          <ul class="app-sub-navigation__list">
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="bluecoat-primary.html">Application</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" href="timeline.html">History</a>
+            </li>
+            <li class="app-sub-navigation__item">
+              <a class="app-sub-navigation__link" aria-current="page" href="#">Add a note</a>
+            </li>
+          </ul>
+        </nav>
+
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">Add notes</h2>
+          <div id="more-detail-hint" class="govuk-hint">
+
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"
+            aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <a href="#" class="govuk-button show-continue">Save</a>
+
+
+
+
+      </div>
+
+
+    </div>
+
+
+
+    {% endblock %}

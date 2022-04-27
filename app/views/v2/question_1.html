@@ -1,0 +1,189 @@
+
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+          <h1 class="govuk-heading-xl">  Bluecoat Aspley Primary School
+<p class="govuk-body">UKPRN:12345678</p>
+          </h1>
+
+
+          <h2 class="govuk-heading-m"></h2>
+
+          <nav class="app-sub-navigation" aria-label="Sub navigation">
+            <ul class="app-sub-navigation__list">
+              <li class="app-sub-navigation__item">
+                <a class="app-sub-navigation__link" aria-current="page" href="#">Application</a>
+              </li>
+              <li class="app-sub-navigation__item">
+                <a class="app-sub-navigation__link" href="timeline.html">History</a>
+              </li>
+              <li class="app-sub-navigation__item">
+                <a class="app-sub-navigation__link" href="additional-notes.html">Add a note</a>
+              </li>
+            </ul>
+          </nav>
+        <h2 class="govuk-heading-l">Check the agreement signatory</h2>
+<p> Check that the signatory is listed as the headteacher or principal for Bluecoat Aspley Primary School on <a href="https://www.get-information-schools.service.gov.uk/" class="govuk-link">Get Information about Schools</a>.</p>
+
+
+  <!--Signatory-->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      <h3 class="govuk-heading-s">Agreement signatory</h3>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      <a class ="app-float-right" href="/lrs_admin/change/index_change_signatory.html">Change</a>
+    </div>
+  </div>
+
+  <dl class="govuk-summary-list ">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Theo Curtis
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          <!--Change--><span class="govuk-visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Phone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        0789 997 6604
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          <span class="govuk-visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Email
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <a href="mailto:tcurtis@weirtraining.co.uk">theo.curtis@bluecoat-primary.co.uk</a>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          <span class="govuk-visually-hidden"> </span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+        <!--Application details-->
+<!--
+        <a href="question_1" class="govuk-button show-continue">Continue</a>
+        <a href="bluecoat-primary.html" class="govuk-button govuk-button--secondary">Back</a>-->
+
+
+
+
+                  <form action="question_1-branch" method="post" novalidate data-validate='my-form-validation'>
+                      <h3 class="govuk-heading-m">    Is the signatory listed on Get Information about Schools (GIAS)?</h3>
+                      {% set detailsHtml %}
+                       {{ govukTextarea({
+                      id: "contact-by-phone",
+                      name: "contact-by-phone",
+                      type: "tel",
+                      autocomplete: "tel",
+                      label: {
+                      text: "Provide details on why you are approving this application"
+                      }
+                      }) }}
+                      {% endset -%}
+
+                      {{ govukRadios({
+                          classes: "govuk-radios",
+                          idPrefix: "question_1-gias",
+                          name: "question_1-gias",
+                          fieldset: {
+                              legend: {
+                                  text: "",
+                                  isPageHeading: true,
+                                  classes: "govuk-fieldset__legend--l"
+                              }
+                          },
+
+                          items: [
+                              {
+                                  value: "Yes",
+                                  text: " Yes - I confirm the signatory is listed on GIAS and I approve this application",
+                                  id: "question_1-gias-yes",
+                                  checked: checked("nqt-after-itt", "yes")
+                              },
+                              {
+                                  value: "No",
+                                  text: "No - But I still approve this application",
+                                  id: "question_1-gias-no",
+                                  checked: checked("nqt-after-itt", "no"),
+                                  conditional: {html: detailsHtml}
+                              },
+                              {
+                                  value: "maybe",
+                                  text: "No - the signatory is not listed on GIAS",
+                                  id: "question_1-gias-no",
+                                  checked: checked("nqt-after-itt", "no")
+                              }
+                          ]
+                      }) }}
+
+                      <div class="govuk-button-group">
+                        {{ govukButton({
+                          text: "Continue"
+                        }) }}
+                        <a class="govuk-link govuk-!-margin-left-3" href="start.html">Back</a>
+                      </div>
+                  </form>
+
+
+
+                  <script type="application/json" id="my-form-validation">
+                    {
+                      "question_1-gias": {
+                        "presence": {
+                          "message": "^You must select either 'Yes' or 'No'"
+                        }
+                      }
+                    }
+                  </script>
+
+      </div>
+    </div>
+
+      {% endblock %}

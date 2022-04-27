@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "menus/helpdesk/menu_top_learner_mgt_assessment.html" %}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "menus/helpdesk/menu_LHS_learner_mgt_assessment.html" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <h1 class="govuk-heading-l">Manage applications</h1>
+
+    <div class="govuk-form-group">
+      <nav class="app-sub-navigation" aria-label="Sub navigation">
+        <ul class="app-sub-navigation__list">
+          <li class="app-sub-navigation__item">
+            <a class="app-sub-navigation__link" aria-current="page" href="app_mgt_2_app_tab_first_line.html">Find an application</a>
+          </li>
+          <li class="app-sub-navigation__item">
+            <a class="app-sub-navigation__link" href="filter-results.html">Filter applications</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+          Find an application
+          </label>
+        </h2>
+        <div id="event-name-hint" class="govuk-hint">
+          Search by organisation name, UKPRN or application reference.
+        </div>
+       <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text" value="Bluecoat Aspley Primary School">
+
+      </div>
+
+
+
+
+
+    <br/>
+        <br/>
+
+    <a href="#" class="govuk-button show-continue">Search</a>
+    <a href="find-application-by-name" class="govuk-button govuk-button--secondary">Clear</a>
+<h2 class="govuk-heading-m">Bluecoat Aspley Primary School<BR/>
+<p class="govuk-body govuk-!-font-weight-bold">UKPRN: 87651234<br/>
+State-funded school
+</p>
+
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+
+      </thead>
+
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+<p class="govuk-body govuk-!-font-size-24">Showing 2 applications  for this organisation</p>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-3">
+              <a href="bluecoat-primary.html" class="govuk-link govuk-link--no-visited-state">
+                Renewal Application
+              </a></h3>
+
+            <p>Application reference: 1234588<br>
+
+              Date received: 18 August 2022</p>
+          </td>
+          <td class="govuk-summary-list__actions">
+
+            <strong class="govuk-tag govuk-tag--blue">
+          Needs review
+            </strong>
+
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-3">
+              <a href="#" class="govuk-link govuk-link--no-visited-state">
+                Renewal Application
+              </a></h3>
+
+            <p>Application reference: 1234565<br>
+
+              Date received: 6 May 2022</p>
+          </td>
+          <td class="govuk-summary-list__actions">
+
+            <strong class="govuk-tag govuk-tag--pink">
+        Timed out
+            </strong>
+
+          </td>
+        </tr>
+
+
+
+
+
+
+
+      </tbody>
+    </table>
+
+  </div>
+
+
+
+
+
+
+  <style>
+    .govuk-summary-list__actions
+    {
+      width:auto;
+
+    }
+
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {% endblock %}
