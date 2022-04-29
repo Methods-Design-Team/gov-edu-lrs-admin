@@ -29,8 +29,10 @@ router.post(`/v2/question_1-branch`, function (req, res) {
         res.redirect(`/v2/approved`);
       } else if (checkGias === 'No'){
             res.redirect(`/v2/approved`);
+          } else if (checkGias === 'maybe'){
+                res.redirect(`/v2/bluecoat-primary-agreememt-waiting`);
     } else {
-        res.redirect(`/v2/question_2`);
+        res.redirect(`/v2/bluecoat-primary-agreememt-rejected`);
     }
 
 

@@ -123,7 +123,31 @@ GOV.UK prototype kit
                       type: "tel",
                       autocomplete: "tel",
                       label: {
-                      text: "Provide details on why you are approving this application"
+                      text: "Add a note to explain why you're approving this application (required)"
+                      }
+                      }) }}
+                      {% endset -%}
+
+                      {% set details2Html %}
+                       {{ govukTextarea({
+                      id: "contact-by-phone",
+                      name: "contact-by-phone",
+                      type: "tel",
+                      autocomplete: "tel",
+                      label: {
+                      text: "Add notes on your contact with the customer (required)"
+                      }
+                      }) }}
+                      {% endset -%}
+
+                      {% set details3Html %}
+                       {{ govukTextarea({
+                      id: "contact-by-phone",
+                      name: "contact-by-phone",
+                      type: "tel",
+                      autocomplete: "tel",
+                      label: {
+                      text: "Add a note to explain why you are rejecting this application (required)"
                       }
                       }) }}
                       {% endset -%}
@@ -149,16 +173,24 @@ GOV.UK prototype kit
                               },
                               {
                                   value: "No",
-                                  text: "No - But I still approve this application",
+                                  text: "No - But the signatory meets the alternative signatory requirements and I approve the application",
                                   id: "question_1-gias-no",
                                   checked: checked("nqt-after-itt", "no"),
                                   conditional: {html: detailsHtml}
                               },
                               {
                                   value: "maybe",
-                                  text: "No - the signatory is not listed on GIAS",
-                                  id: "question_1-gias-no",
-                                  checked: checked("nqt-after-itt", "no")
+                                  text: "No - But I need to contact the customer for further information",
+                                  id: "question_1-gias-maybe",
+                                  checked: checked("nqt-after-itt", "no"),
+                                  conditional: {html: details2Html}
+                              },
+                              {
+                                  value: "reject",
+                                  text: "No - so I am rejecting the application",
+                                  id: "question_1-gias-reject",
+                                  checked: checked("nqt-after-itt", "no"),
+                                  conditional: {html: details3Html}
                               }
                           ]
                       }) }}
