@@ -107,16 +107,75 @@ GOV.UK prototype kit
             </li>
           </ul>
         </nav>
+        <h2 class="govuk-heading-l">Check the agreement signatory</h2>
+      <p> Check that the signatory is listed as the headteacher or principal for Bluecoat Aspley Primary School on <a href="https://www.get-information-schools.service.gov.uk/" class="govuk-link">Get Information about Schools</a>.</p>
 
-          <h2 class="govuk-heading-m">Waiting on customer</h2>
+
+      <!--Signatory-->
+      <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+      <h3 class="govuk-heading-s">Agreement signatory</h3>
+      </div>
+      <div class="govuk-grid-column-one-quarter">
+      <a class ="app-float-right" href="/lrs_admin/change/index_change_signatory.html">Change</a>
+      </div>
+      </div>
+
+      <dl class="govuk-summary-list ">
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Theo Curtis
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          <!--Change--><span class="govuk-visually-hidden"></span>
+        </a>
+      </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Phone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        0789 997 6604
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          <span class="govuk-visually-hidden"></span>
+        </a>
+      </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Email
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <a href="mailto:tcurtis@weirtraining.co.uk">theo.curtis@bluecoat-primary.co.uk</a>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          <span class="govuk-visually-hidden"> </span>
+        </a>
+      </dd>
+      </div>
+      </dl>
 
 
-  <h3 class="govuk-heading-s">Reason added by Bethany Johnson - 30 Aug 2020</h3>
-          <p> Need to check signatory details with the applicant as the signatory provided in the application is not listed on GIAS.</p>
+
+        <!--  <h3 class="govuk-heading-m">Status: waiting on customer</h3>-->
+
+
+  <h3 class="govuk-heading-s">Status changed by Bethany Johnson on 30 August 2020 with reason:</h3>
+          <p> 'Need to check signatory details with the applicant as the signatory provided in the application is not listed on GIAS.</p>
 
 
           <form action="question_5-branch" method="post" novalidate data-validate='my-form-validation'>
-              <h3 class="govuk-heading-m">Have you heard back from the customer?</h3>
+              <h3 class="govuk-heading-m">Update application status</h3>
               {% set detailsHtml %}
                {{ govukTextarea({
               id: "contact-by-phone",
@@ -124,7 +183,18 @@ GOV.UK prototype kit
               type: "tel",
               autocomplete: "tel",
               label: {
-              text: "Add notes on why you are rejecting this application"
+              text: "Add a note on your contact with the customer and explain why you're approving this application (required)"
+              }
+              }) }}
+              {% endset -%}
+              {% set detailsHtml2 %}
+               {{ govukTextarea({
+              id: "contact-by-phone",
+              name: "contact-by-phone",
+              type: "tel",
+              autocomplete: "tel",
+              label: {
+              text: "Add a note on your contact with the customer and explain why you're rejecting this application (required)"
               }
               }) }}
               {% endset -%}
@@ -144,22 +214,17 @@ GOV.UK prototype kit
                   items: [
                       {
                           value: "Yes",
-                          text: " Yes - and I approve this application",
+                          text: " I approve this application",
                           id: "question_1-gias-yes",
-                          checked: checked("nqt-after-itt", "yes")
-                      },
-                      {
-                          value: "No",
-                          text: "Yes - But I am rejecting this application",
-                          id: "question_1-gias-no",
-                          checked: checked("nqt-after-itt", "no"),
+                          checked: checked("nqt-after-itt", "yes"),
                           conditional: {html: detailsHtml}
                       },
                       {
-                          value: "maybe",
-                          text: "No",
+                          value: "No",
+                          text: "I reject this application",
                           id: "question_1-gias-no",
-                          checked: checked("nqt-after-itt", "no")
+                          checked: checked("nqt-after-itt", "no"),
+                          conditional: {html: detailsHtml2}
                       }
                   ]
               }) }}

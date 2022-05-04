@@ -167,27 +167,27 @@ GOV.UK prototype kit
                           items: [
                               {
                                   value: "Yes",
-                                  text: " Yes - I confirm the signatory is listed on GIAS and I approve this application",
+                                  text: " Yes, I confirm the signatory is listed on GIAS and I approve this application",
                                   id: "question_1-gias-yes",
                                   checked: checked("nqt-after-itt", "yes")
                               },
                               {
                                   value: "No",
-                                  text: "No - But the signatory meets the alternative signatory requirements and I approve the application",
+                                  text: "No, but the signatory meets the alternative signatory requirements and I approve the application",
                                   id: "question_1-gias-no",
                                   checked: checked("nqt-after-itt", "no"),
                                   conditional: {html: detailsHtml}
                               },
                               {
                                   value: "maybe",
-                                  text: "No - But I need to contact the customer for further information",
+                                  text: "No, but I need to contact the customer for further information",
                                   id: "question_1-gias-maybe",
                                   checked: checked("nqt-after-itt", "no"),
                                   conditional: {html: details2Html}
                               },
                               {
                                   value: "reject",
-                                  text: "No - so I am rejecting the application",
+                                  text: "No, so I am rejecting the application",
                                   id: "question_1-gias-reject",
                                   checked: checked("nqt-after-itt", "no"),
                                   conditional: {html: details3Html}
