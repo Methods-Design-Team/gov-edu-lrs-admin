@@ -89,9 +89,9 @@ GOV.UK prototype kit
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">  Bluecoat Aspley Primary School</h1>
-
-
+        <h1 class="govuk-heading-xl">  Bluecoat Aspley Primary School
+<p class="govuk-body">UKPRN:12345678</p>
+</h1>
         <h2 class="govuk-heading-m"></h2>
 
         <nav class="app-sub-navigation" aria-label="Sub navigation">
@@ -108,20 +108,62 @@ GOV.UK prototype kit
           </ul>
         </nav>
 
-          <h2 class="govuk-heading-m">Application approved</h2>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+              Agreement signatory</h1>
+              </legend><br>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contractor">
+                  First name
+                </label>
+                <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+                  spellcheck="false" placeholder="Theo">
+              </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contractor">
+                  Last name
+                </label>
+                <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+                  spellcheck="false" placeholder="Curtis">
+              </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contractor">
+                  Phone number
+                </label>
+                <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+                  spellcheck="false" placeholder="0789 997 6604">
+              </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contractor">
+                  Email address
+                </label>
+                <input class="govuk-input govuk-!-width-one-half" id="contractor" name="contractor" type="text"
+                  spellcheck="false" placeholder="theo.curtis@bluecoat-primary.co.uk">
+              </div>
+            </fieldset>
+            </div>
+
+
+            <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Why are you changing the details?
+        </label>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+      </div>
 
 
 
-          <p> The application status has been updated to 'pending signature'.</p>
-  <p> We've sent an email to the signatory with a link to sign the agreement.</p>
-
-  <p>Once the signatory has signed the agreement, the organisation's access to the learning records service will be automatically renewed for 12 months. </p>
-
-        <div class="govuk-button-group">
-
-          <a href="bluecoat-primary-agreememt-complete" class="govuk-button show-continue">View application summary</a>
-        <!--<a href="bluecoat-primary-agreememt-complete" class="govuk-button govuk-button--secondary">View application summary</a>-->
-
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Save change"
+              }) }}
+              <a class="govuk-link govuk-!-margin-left-3" href="question_1.html">Back</a>
+            </div>
 
         </div>
 

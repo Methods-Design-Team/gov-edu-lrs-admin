@@ -1,0 +1,183 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: serviceUrl or "/",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "https://lrs-test10.dev.lrs.education.gov.uk/Pages/WhatsNew",
+      text: "Help"
+    },
+    {
+      href: "#",
+      text: "What's new"
+    },
+    {
+      href: "#",
+      text: "My account"
+    },
+    {
+      href: "#",
+      text: "Log out"
+    }
+  ]
+  }) }}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype",
+      classes: "govuk-tag--pink"
+    },
+    html: 'This is not a full service. It is not production code and you might experience problems.',
+    classes: 'govuk-width-container'
+  }) }}
+  <div class="grey">
+  <div class="govuk-width-container">
+    <nav class="app-navigation govuk-clearfix govuk-width-container" style="max-width: 100%;" title="Navigation menu between learner and achievement management.">
+
+      <ul class="app-navigation__list app-width-container" style="left: -15px; list-style: none; margin: 0px auto; max-width: 1200px; padding: 0px; position: relative;">
+
+        <li class="app-navigation__list-item">
+          <a id="learnermanagement_menu" href="#" class="govuk-link govuk-link--no-visited-state app-navigation__link">Manage learners</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+          <a id="achievementmanagement_menu" href="#" class="govuk-link govuk-link--no-visited-state app-navigation__link">Update personal learning record</a>
+        </li>
+
+        <li class="app-navigation__list-item app-navigation__list-item--current">
+          <a id="learnermanagement_menu" href="#" class="govuk-link govuk-link--no-visited-state app-navigation__link">Submit qualification data</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-width-container govuk-!-margin-top-3">
+  <div class="govuk-breadcrumbs govuk-!-margin-top-0">
+    <ol class="govuk-breadcrumbs__list">
+      <!-- <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="validate-data.html">Validate data</a>
+      </li> -->
+      <!-- <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="select-ay">Select academic year</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="select-file-to-upload">Upload your data file to validate</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="file-uploaded">File uploaded</a>
+      </li> -->
+    </ol>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-quarter">
+      <div id="sub-menu">
+        <div class="app-pane__subnav">
+          <nav aria-label="Main Navigation" id="subNavigation" class="app-subnav">
+            <a href="#main-content" class="govuk-skip-link govuk-skip-link-left-navigation">Skip menu</a>
+
+          <!--  <ul class="app-subnav__section">
+              <li class="app-subnav__section-item app-subnav__section-item--current">
+                <a href="../welcome.html" class="app-subnav__link govuk-link govuk-link--no-visited-state" style="font-weight: 700;">Overview</a>
+              </li>
+            </ul>-->
+
+            <h4 class="app-subnav__theme"></h4>
+            <ul class="app-subnav__section">
+              <li class="app-subnav__section-item">
+                <a href="overview.html" class="app-subnav__link govuk-link govuk-link--no-visited-state">Getting started</a>
+              </li>
+
+              <li class="app-subnav__section-item ">
+                <a href="select-the-file-type.html" class="app-subnav__link govuk-link govuk-link--no-visited-state">Make a new submission</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="view-submission-status.html" class="app-subnav__link govuk-link govuk-link--no-visited-state">View submission status</a>
+              </li>
+
+              <li class="app-subnav__section-item app-subnav__section-item--current">
+                <a href="test-template.html" class="app-subnav__link govuk-link govuk-link--no-visited-state"style="font-weight: 700;">Test your template (optional)</a>
+              </li>
+            </ul>
+
+
+
+          </nav>
+        </div> <!-- app-pane__subnav end -->
+      </div> <!-- sub-menu end -->
+      </div> <!-- govuk-grid-column-one-third end -->
+
+      <div class="govuk-grid-column-three-quarters">
+
+
+          <h1 class="govuk-panel__title">We’re testing your template file</h1>
+
+
+        <p>  We’are now checking your template file for errors. This may take some time.</p>
+
+  <span class="govuk-body"> <strong> File name </strong></span>
+<p>2021_template.txt</p>
+
+
+        <h2 class="govuk-heading-s">What happens next?</h2>
+
+        <p class="govuk-body">Once we’ve finished processing your file, we’ll email you to let you know. We’ll update its status to one of the following:</p><br/>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>no errors found - this means that there are no errors in your template file and you can use it to make a new submission</li>
+          <li>errors found - this means there is a problem with your template file which you should correct and retest if needed</li>
+        </ul>
+
+        <p>Select ‘View tested files’ to check the status of your template file.</p>
+
+
+
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "View tested files",
+            href: "view-tested-files.html"
+          }) }}
+
+          {{ govukButton({
+            text: "Test another file",
+            classes: "govuk-button--secondary",
+            href: "select-template-reporting-period"
+          }) }}
+        </div>
+
+      </div>
+
+
+
+    </div> <!-- govuk-grid-row end -->
+  </main>
+</div> <!-- ovuk-width-container end -->
+
+<script>
+
+  const nav = document.querySelector('nav');
+  const div = document.createElement('div');
+
+  div.textContent = 'David Ricardo, Strood Academy';
+  nav.prepend(div);
+  div.style.textAlign = 'right';
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="../index.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-top-4 govuk-!-margin-bottom-2">Select submission window</h1>
+
+      <h2 class="govuk-heading-l">(not visible to users)</h2>
+      
+
+      <form action="/what-time-of-the-year-answer-v5" method="post">
+
+        {{ govukRadios({
+          idPrefix: "what-time-of-the-year-v5",
+          name: "what-time-of-the-year-v5",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "winter-series-result",
+              text: "1. Winter Results - Year Two"
+            }, 
+            {
+              value: "summer-series-entries",
+              text: "2. Summer Entries - Year Two 
+              (presentation)"
+            },
+            {
+              value: "summer-results-gce",
+              text: "3. Summer Results (GCE) - Year Two"
+            },
+            {
+              value: "summer-results-gcse",
+              text: "4. Summer Results (GCSE) - Year Two"
+            },
+            {
+              value: "late-revised-results",
+              text: "5. Late Summer Results - Year Two"
+            },
+            {
+              value: "summer-final-results",
+              text: "6. Final Result - Year Two"
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        <img src="/public/images/diagram.png" alt="diagram" width="900px">
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

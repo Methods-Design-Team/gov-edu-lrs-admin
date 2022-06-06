@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: serviceUrl or "/",
+    containerClasses: "govuk-width-container"
+
+  }) }}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype",
+      classes: "govuk-tag--pink"
+    },
+    html: 'This is not a full service. It is not production code and you might experience problems.',
+    classes: 'govuk-width-container'
+  }) }}
+
+
+<!-- <div class="govuk-width-container govuk-!-margin-top-3">
+  <div class="govuk-breadcrumbs govuk-!-margin-top-0">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Welcome</a>
+      </li>
+    </ol>
+  </div>
+</div> -->
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-xl"> User agreement reminder</h1>
+
+        <p class="govuk-body">You should only use this portal:</p>
+        <br/>
+<ul class="govuk-list govuk-list--bullet">
+  <li>If you've been authorised to access it after your organisation has completed the <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">registration process (opens ina new tab)</a></li>
+  <li>to view the data of learners who are associated with your organisation, for examples
+  those who you're supporting or enrolling - viewing the data of anyone else, including friends, family and public figures, is a breach of
+data protection legislation</li>
+  <li>for purposes set out in the <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">user agreement (opens in a new tab)</a> </li>
+</ul>
+  <p class="govuk-body">It's important that you read the user agreement as you and your organisation have a legal responsibility to protect
+  the data within this portal.</p>
+
+
+  <br/>  <br/>
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+    We keep logs of all user activity, including searches for learners. We monitor these logs and any serious breaches of the user aggreement will
+    be reported to the <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">information commissioner's office(ICO) (opens in a new tab)</a>.
+    </strong>
+  </div>
+
+<br/>
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Accept",
+    href: "lrs-home.html"
+  }) }}
+
+  {{ govukButton({
+    text: "Decline",
+    classes: "govuk-button--secondary",
+    href: "#"
+  }) }}
+</div>
+
+
+
+
+
+    </div> <!-- govuk-grid-row end -->
+  </main>
+</div> <!-- ovuk-width-container end -->
+
+<!--<script>
+
+  const nav = document.querySelector('nav');
+  const div = document.createElement('div');
+
+  div.textContent = 'David Ricardo, Assessment and Qualifications Alliance';
+  nav.prepend(div);
+  div.style.textAlign = 'right';
+
+</script>-->
+
+{% endblock %}

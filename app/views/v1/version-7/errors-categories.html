@@ -1,0 +1,833 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: serviceUrl or "/",
+    containerClasses: "govuk-width-container",
+    navigation: [
+    {
+      href: "https://lrs-test10.dev.lrs.education.gov.uk/Pages/WhatsNew",
+      text: "Help"
+    },
+    {
+      href: "#",
+      text: "What's new"
+    },
+    {
+      href: "#",
+      text: "My account"
+    },
+    {
+      href: "#",
+      text: "Log out"
+    }
+  ]
+  }) }}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype",
+      classes: "govuk-tag--pink"
+    },
+    html: 'This is not a full service. It is not production code and you might experience problems.',
+    classes: 'govuk-width-container'
+  }) }}
+  <div class="grey">
+  <div class="govuk-width-container">
+    <nav class="app-navigation govuk-clearfix govuk-width-container" style="max-width: 100%;" title="Navigation menu between learner and achievement management.">
+
+      <ul class="app-navigation__list app-width-container" style="left: -15px; list-style: none; margin: 0px auto; max-width: 1200px; padding: 0px; position: relative;">
+
+        <li class="app-navigation__list-item">
+          <a id="learnermanagement_menu" href="lrs-home" class="govuk-link govuk-link--no-visited-state app-navigation__link">Home</a>
+        </li>
+        <li class="app-navigation__list-item">
+          <a id="learnermanagement_menu" href="#" class="govuk-link govuk-link--no-visited-state app-navigation__link">Learner management</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+          <a id="achievementmanagement_menu" href="#" class="govuk-link govuk-link--no-visited-state app-navigation__link">Achievement management </a>
+        </li>
+
+        <li class="app-navigation__list-item app-navigation__list-item--current">
+          <a id="learnermanagement_menu" href="#" class="govuk-link govuk-link--no-visited-state app-navigation__link">Submit qualification data</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  </div>
+
+  <div class="govuk-width-container govuk-!-margin-top-3">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Welcome</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Submit qualification data</a>
+        </li>
+       <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">View submission status</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+           <a class="govuk-breadcrumbs__link" href="#"> Myqualificationfile.csv</a>
+         </li>
+      </ol>
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-quarter">
+      <div id="sub-menu">
+        <div class="app-pane__subnav">
+          <nav aria-label="Main Navigation" id="subNavigation" class="app-subnav">
+            <a href="#main-content" class="govuk-skip-link govuk-skip-link-left-navigation">Skip menu</a>
+
+            <!-- <ul class="app-subnav__section">
+              <li class="app-subnav__section-item">
+                <a href="../welcome.html" class="app-subnav__link govuk-link govuk-link--no-visited-state">Overview</a>
+              </li>
+            </ul> -->
+
+            <h4 class="app-subnav__theme"></h4>
+            <ul class="app-subnav__section">
+              <li class="app-subnav__section-item">
+                <a href="overview.html" class="app-subnav__link govuk-link govuk-link--no-visited-state">Getting started</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="select-the-file-type.html" class="app-subnav__link govuk-link govuk-link--no-visited-state ">Make a new submission</a>
+              </li>
+
+              <li class="app-subnav__section-item app-subnav__section-item--current">
+                <a href="view-submission-status.html" class="app-subnav__link govuk-link govuk-link--no-visited-state" style="font-weight: 700;">View submission status</a>
+              </li>
+
+              <li class="app-subnav__section-item">
+                <a href="test-template.html" class="app-subnav__link govuk-link govuk-link--no-visited-state">Test your template (optional)</a>
+              </li>
+            </ul>
+          </nav>
+        </div> <!-- app-pane__subnav end -->
+      </div> <!-- sub-menu end -->
+      </div> <!-- govuk-grid-column-one-third end -->
+
+      <div class="govuk-grid-column-three-quarters">
+
+
+        <span class="govuk-caption-xl">Myqualificationfile.csv </span>
+        <h1 class="govuk-heading-xl">72 Errors found</h1>
+
+            <p>  <a class="govuk-link" href="overview">Download the errors </a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            AwardDate
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+                        </div>
+                      </div>
+
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                              CandidateIdentifier
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+                        </div>
+                      </div>
+
+
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                          CentreNCN
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+                        </div>
+                      </div>
+
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                        CentrePostcode
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">334</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">344</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">677</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">690</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">698</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">754</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">767</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+                    <!--      <nav class="govuk-!-margin-top-9" role="navigation" aria-label="Pagination">
+
+                              <ul class="pagination">
+
+                                <li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true"
+                                    aria-label="Page 1, current page">1</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
+                                <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span
+                                      aria-hidden="true" role="presentation">&raquo;</span></a></li>
+                              </ul>
+                            </nav>-->
+
+
+
+
+                        </div>
+                      </div>
+
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                              CentreURN
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+                        </div>
+                      </div>
+
+
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            DOB
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+                        </div>
+                      </div>
+
+
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            FirstEntryDate
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+                        </div>
+                      </div>
+
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            QualificationGrade
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+                        </div>
+                      </div>
+
+
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                              QualificationNumber
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+                        </div>
+                      </div>
+
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                              QualificationType
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                    OtherQualificationType
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                    SubjectLevelGrade
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                              UKPRN
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+                          <table class="govuk-table">
+                            <!--<caption class="govuk-table__caption govuk-table__caption--s">Errors summary</caption>-->
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Line number</th>
+                                <th scope="col" class="govuk-table__header">Description</th>
+                                <th scope="col" class="govuk-table__header">Guide</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">TThe field FirstEntryDate must be 31-12-2999 for enties</td>
+                                  <td class="govuk-table__cell">Where RecordType - Entry, FirstEntryDate = 31-12-2999 (missing)
+                                  <p> Enter -2 if the centre is overseas.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">70</td>
+                                <td class="govuk-table__cell">The field QualificationNumber must be a valid qualification number</td>
+                                  <td class="govuk-table__cell">A valid qualification number must be supplied.<p> This can be read from the ofqual Register.</p></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">300</td>
+                                <td class="govuk-table__cell">Where qualification type is QAN/SQN, the field QualificationNumber must be a valid qualification number.</td>
+                                  <td class="govuk-table__cell">If QualificationNumberType is eith 'QAN' or 'SQN', a valid qualification number must be supplied.
+                                  <p> This can be read from the Ofqual Register.</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+Back
+  </button>
+
+
+      </div>
+
+
+
+    </div> <!-- govuk-grid-row end -->
+
+    <style>
+
+    .js-enabled .govuk-accordion__section-button
+    {
+      font-size:19px;
+
+    }
+
+    thead tr.govuk-table__row:last-child {
+          /* background-color: red; */
+          border-bottom: 1px solid #b1b4b6;
+      }
+
+    tr.govuk-table__row:last-child {
+        /* background-color: red; */
+        border-bottom: 2px solid WHITE;
+    }
+      </style>
+  </main>
+</div> <!-- ovuk-width-container end -->
+
+<script>
+
+  const nav = document.querySelector('nav');
+  const div = document.createElement('div');
+
+  div.textContent = 'David Ricardo, Strood Academy';
+  nav.prepend(div);
+  div.style.textAlign = 'right';
+
+</script>
+
+{% endblock %}
